@@ -38,6 +38,11 @@ public class BballUI extends javax.swing.JFrame {
     int teamthreeMiss;
     int teamoffRebound;
     int teamdefRebound;
+    int teamAssist;
+    int teamTurnover;
+    int teamSteal;
+    int teamBlock;
+    
     /**
      * Creates new form BballUI
      */
@@ -55,6 +60,7 @@ public class BballUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -80,14 +86,14 @@ public class BballUI extends javax.swing.JFrame {
         threeMissButton = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
+        offReboundButton = new javax.swing.JButton();
+        assistButton = new javax.swing.JButton();
+        turnoverButton = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jButton46 = new javax.swing.JButton();
-        jButton47 = new javax.swing.JButton();
-        jButton48 = new javax.swing.JButton();
+        defReboundButton = new javax.swing.JButton();
+        stealButton = new javax.swing.JButton();
+        blockButton = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
@@ -96,8 +102,16 @@ public class BballUI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         menuEditNames = new javax.swing.JMenu();
+        menuNameEdit1 = new javax.swing.JMenuItem();
+        menuNameEdit2 = new javax.swing.JMenuItem();
+        menuNameEdit3 = new javax.swing.JMenuItem();
+        menuNameEdit4 = new javax.swing.JMenuItem();
+        menuNameEdit5 = new javax.swing.JMenuItem();
+        menuNameEditOpp = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -358,11 +372,26 @@ public class BballUI extends javax.swing.JFrame {
 
         jLabel3.setText("Offense");
 
-        jButton43.setText("Rebound");
+        offReboundButton.setText("Rebound");
+        offReboundButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                offReboundButtonActionPerformed(evt);
+            }
+        });
 
-        jButton44.setText("Assist");
+        assistButton.setText("Assist");
+        assistButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assistButtonActionPerformed(evt);
+            }
+        });
 
-        jButton45.setText("Turnover");
+        turnoverButton.setText("Turnover");
+        turnoverButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                turnoverButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -375,11 +404,11 @@ public class BballUI extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(offReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(assistButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(turnoverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
@@ -389,19 +418,34 @@ public class BballUI extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(offReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(turnoverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assistButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jLabel4.setText("Defense");
 
-        jButton46.setText("Rebound");
+        defReboundButton.setText("Rebound");
+        defReboundButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                defReboundButtonActionPerformed(evt);
+            }
+        });
 
-        jButton47.setText("Steal");
+        stealButton.setText("Steal");
+        stealButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stealButtonActionPerformed(evt);
+            }
+        });
 
-        jButton48.setText("Block");
+        blockButton.setText("Block");
+        blockButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blockButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -414,11 +458,11 @@ public class BballUI extends javax.swing.JFrame {
                         .addComponent(jLabel4))
                     .addGroup(jPanel19Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(defReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(stealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(blockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
@@ -428,10 +472,10 @@ public class BballUI extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton48, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(blockButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton46, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jButton47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(defReboundButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(stealButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -536,6 +580,55 @@ public class BballUI extends javax.swing.JFrame {
         jMenu2.setText("Edit");
 
         menuEditNames.setText("Edit Player Names");
+
+        menuNameEdit1.setText("Player 1");
+        menuNameEdit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEdit1ActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEdit1);
+
+        menuNameEdit2.setText("Player 2");
+        menuNameEdit2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEdit2ActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEdit2);
+
+        menuNameEdit3.setText("Player 3");
+        menuNameEdit3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEdit3ActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEdit3);
+
+        menuNameEdit4.setText("Player4");
+        menuNameEdit4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEdit4ActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEdit4);
+
+        menuNameEdit5.setText("Player 5");
+        menuNameEdit5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEdit5ActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEdit5);
+
+        menuNameEditOpp.setText("Opponent");
+        menuNameEditOpp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNameEditOppActionPerformed(evt);
+            }
+        });
+        menuEditNames.add(menuNameEditOpp);
+
         jMenu2.add(menuEditNames);
 
         jMenuBar1.add(jMenu2);
@@ -600,136 +693,136 @@ public class BballUI extends javax.swing.JFrame {
     }//GEN-LAST:event_RBSubtractActionPerformed
 
     private void ftMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMakeButtonActionPerformed
-        // TODO add your handling code here:
+        // FreeThrow Make Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subftMake();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                System.out.println("sub player1 " + "FT Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subftMake();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                System.out.println("sub player2 " + "FT Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subftMake();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                System.out.println("sub player3 " + "FT Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subftMake();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                System.out.println("sub player4 " + "FT Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subftMake();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                System.out.println("sub player5 " + "FT Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subftMake();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                System.out.println("sub Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addftMake();
-                System.out.println("player1 " + player1.gettotalPoints());
+                System.out.println("player1 " + "FT Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addftMake();
-                System.out.println("player2 " + player2.gettotalPoints());
+                System.out.println("player2 " + "FT Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addftMake();
-                System.out.println("player3 " + player3.gettotalPoints());
+                System.out.println("player3 " + "FT Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addftMake();
-                System.out.println("player4 " + player4.gettotalPoints());
+                System.out.println("player4 " + "FT Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addftMake();
-                System.out.println("player5 " + player5.gettotalPoints());
+                System.out.println("player5 " + "FT Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addftMake();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                System.out.println("Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_ftMakeButtonActionPerformed
 
     private void ftMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMissButtonActionPerformed
-        // TODO add your handling code here:
+        // FreeThrow Miss Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subftMiss();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                System.out.println("sub player1 " + "FT Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subftMiss();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                System.out.println("sub player2 " + "FT Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subftMiss();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                System.out.println("sub player3 " + "FT Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subftMiss();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                System.out.println("sub player4 " + "FT Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subftMiss();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                System.out.println("sub player5 " + "FT Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subftMiss();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                System.out.println("sub Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addftMiss();
-                System.out.println("player1 " + player1.gettotalPoints());
+                System.out.println("player1 " + "FT Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addftMiss();
-                System.out.println("player2 " + player2.gettotalPoints());
+                System.out.println("player2 " + "FT Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addftMiss();
-                System.out.println("player3 " + player3.gettotalPoints());
+                System.out.println("player3 " + "FT Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addftMiss();
-                System.out.println("player4 " + player4.gettotalPoints());
+                System.out.println("player4 " + "FT Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addftMiss();
-                System.out.println("player5 " + player5.gettotalPoints());
+                System.out.println("player5 " + "FT Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addftMiss();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                System.out.println("Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_ftMissButtonActionPerformed
 
     private void twoMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoMakeButtonActionPerformed
-        // TODO add your handling code here:
+        // 2pt Make Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subtwoMake();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                System.out.println("sub player1 " + "2pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subtwoMake();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                System.out.println("sub player2 " + "2pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subtwoMake();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                System.out.println("sub player3 " + "2pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subtwoMake();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                System.out.println("sub player4 " + "2pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subtwoMake();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                System.out.println("sub player5 " + "2pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subtwoMake();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                System.out.println("sub Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addtwoMake();
-                System.out.println("player1 " + player1.gettotalPoints());
+                System.out.println("player1 " + "2pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addtwoMake();
-                System.out.println("player2 " + player2.gettotalPoints());
+                System.out.println("player2 " + "2pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addtwoMake();
-                System.out.println("player3 " + player3.gettotalPoints());
+                System.out.println("player3 " + "2pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addtwoMake();
-                System.out.println("player4 " + player4.gettotalPoints());
+                System.out.println("player4 " + "2pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addtwoMake();
-                System.out.println("player5 " + player5.gettotalPoints());
+                System.out.println("player5 " + "2pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addtwoMake();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                System.out.println("Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_twoMakeButtonActionPerformed
@@ -738,138 +831,455 @@ public class BballUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (RBSubtract.isSelected()){
             if (flag1 == true){
-                player1.subtwoMake();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                player1.subtwoMiss();
+                System.out.println("sub player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
-                player2.subtwoMake();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                player2.subtwoMiss();
+                System.out.println("sub player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
-                player3.subtwoMake();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                player3.subtwoMiss();
+                System.out.println("sub player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
-                player4.subtwoMake();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                player4.subtwoMiss();
+                System.out.println("sub player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
-                player5.subtwoMake();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                player5.subtwoMiss();
+                System.out.println("sub player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
-                playerOpp.subtwoMake();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                playerOpp.subtwoMiss();
+                System.out.println("sub Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
-                player1.addtwoMake();
-                System.out.println("player1 " + player1.gettotalPoints());
+                player1.addtwoMiss();
+                System.out.println("player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
-                player2.addtwoMake();
-                System.out.println("player2 " + player2.gettotalPoints());
+                player2.addtwoMiss();
+                System.out.println("player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
-                player3.addtwoMake();
-                System.out.println("player3 " + player3.gettotalPoints());
+                player3.addtwoMiss();
+                System.out.println("player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
-                player4.addtwoMake();
-                System.out.println("player4 " + player4.gettotalPoints());
+                player4.addtwoMiss();
+                System.out.println("player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
-                player5.addtwoMake();
-                System.out.println("player5 " + player5.gettotalPoints());
+                player5.addtwoMiss();
+                System.out.println("player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
-                playerOpp.addtwoMake();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                playerOpp.addtwoMiss();
+                System.out.println("Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_twoMissButtonActionPerformed
 
     private void threeMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMakeButtonActionPerformed
-        // TODO add your handling code here:
+        // 3pt Make Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subthreeMake();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                System.out.println("sub player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subthreeMake();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                System.out.println("sub player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subthreeMake();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                System.out.println("sub player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subthreeMake();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                System.out.println("sub player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subthreeMake();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                System.out.println("sub player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subthreeMake();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                System.out.println("sub Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addthreeMake();
-                System.out.println("player1 " + player1.gettotalPoints());
+                System.out.println("player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addthreeMake();
-                System.out.println("player2 " + player2.gettotalPoints());
+                System.out.println("player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addthreeMake();
-                System.out.println("player3 " + player3.gettotalPoints());
+                System.out.println("player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addthreeMake();
-                System.out.println("player4 " + player4.gettotalPoints());
+                System.out.println("player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addthreeMake();
-                System.out.println("player5 " + player5.gettotalPoints());
+                System.out.println("player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addthreeMake();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                System.out.println("Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_threeMakeButtonActionPerformed
 
     private void threeMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMissButtonActionPerformed
-        // TODO add your handling code here:
+        // 3pt Miss Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
-                player1.subtwoMake();
-                System.out.println("sub player1 " + player1.gettotalPoints());
+                player1.subthreeMiss();
+                System.out.println("sub player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
             }else if(flag2 == true){
-                player2.subtwoMake();
-                System.out.println("sub player2 " + player2.gettotalPoints());
+                player2.subthreeMiss();
+                System.out.println("sub player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
             }else if(flag3 == true){
-                player3.subtwoMake();
-                System.out.println("sub player3 " + player3.gettotalPoints());
+                player3.subthreeMiss();
+                System.out.println("sub player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
             }else if(flag4 == true){
-                player4.subtwoMake();
-                System.out.println("sub player4 " + player4.gettotalPoints());
+                player4.subthreeMiss();
+                System.out.println("sub player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
             }else if(flag5 == true){
-                player5.subtwoMake();
-                System.out.println("sub player5 " + player5.gettotalPoints());
+                player5.subthreeMiss();
+                System.out.println("sub player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
             }else if(flagOpp == true){
-                playerOpp.subtwoMake();
-                System.out.println("sub Opponent " + playerOpp.gettotalPoints());
+                playerOpp.subthreeMiss();
+                System.out.println("sub Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
-                player1.addtwoMake();
-                System.out.println("player1 " + player1.gettotalPoints());
+                player1.addthreeMiss();
+                System.out.println("player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
             }else if(flag2 == true){
-                player2.addtwoMake();
-                System.out.println("player2 " + player2.gettotalPoints());
+                player2.addthreeMiss();
+                System.out.println("player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
             }else if(flag3 == true){
-                player3.addtwoMake();
-                System.out.println("player3 " + player3.gettotalPoints());
+                player3.addthreeMiss();
+                System.out.println("player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
             }else if(flag4 == true){
-                player4.addtwoMake();
-                System.out.println("player4 " + player4.gettotalPoints());
+                player4.addthreeMiss();
+                System.out.println("player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
             }else if(flag5 == true){
-                player5.addtwoMake();
-                System.out.println("player5 " + player5.gettotalPoints());
+                player5.addthreeMiss();
+                System.out.println("player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
             }else if(flagOpp == true){
-                playerOpp.addtwoMake();
-                System.out.println("Opponent " + playerOpp.gettotalPoints());
+                playerOpp.addthreeMiss();
+                System.out.println("Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
             }
         }
     }//GEN-LAST:event_threeMissButtonActionPerformed
 
-    
+    private void offReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offReboundButtonActionPerformed
+        // Offensive Rebound Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.suboffRebound();
+                System.out.println("sub player1 " + "Off Reb " +  player1.getoffRebound());
+            }else if(flag2 == true){
+                player2.suboffRebound();
+                System.out.println("sub player2 " + "Off Reb " +  player2.getoffRebound());
+            }else if(flag3 == true){
+                player3.suboffRebound();
+                System.out.println("sub player3 " + "Off Reb " +  player3.getoffRebound());
+            }else if(flag4 == true){
+                player4.suboffRebound();
+                System.out.println("sub player4 " + "Off Reb " +  player4.getoffRebound());
+            }else if(flag5 == true){
+                player5.suboffRebound();
+                System.out.println("sub player5 " + "Off Reb " +  player5.getoffRebound());
+            }else if(flagOpp == true){
+                playerOpp.suboffRebound();
+                System.out.println("sub Opponent " + "Off Reb " +  playerOpp.getoffRebound());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addoffRebound();
+                System.out.println("player1 " + "Off Reb " +  player1.getoffRebound());
+            }else if(flag2 == true){
+                player2.addoffRebound();
+                System.out.println("player2 " + "Off Reb " +  player2.getoffRebound());
+            }else if(flag3 == true){
+                player3.addoffRebound();
+                System.out.println("player3 " + "Off Reb " +  player3.getoffRebound());
+            }else if(flag4 == true){
+                player4.addoffRebound();
+                System.out.println("player4 " + "Off Reb " +  player4.getoffRebound());
+            }else if(flag5 == true){
+                player5.addoffRebound();
+                System.out.println("player5 " + "Off Reb " +  player5.getoffRebound());
+            }else if(flagOpp == true){
+                playerOpp.addoffRebound();
+                System.out.println("Opponent " + "Off Reb " +  playerOpp.getoffRebound());
+            }
+        }                            
+    }//GEN-LAST:event_offReboundButtonActionPerformed
+
+    private void defReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_defReboundButtonActionPerformed
+        // Defensive Rebound Actions and Logs
+         if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subdefRebound();
+                System.out.println("sub player1 " + " Def Rebound " +  player1.getdefRebound());
+            }else if(flag2 == true){
+                player2.subdefRebound();
+                System.out.println("sub player2 " + " Def Rebound " +  player2.getdefRebound());
+            }else if(flag3 == true){
+                player3.subdefRebound();
+                System.out.println("sub player3 " + " Def Rebound " +  player3.getdefRebound());
+            }else if(flag4 == true){
+                player4.subdefRebound();
+                System.out.println("sub player4 " + " Def Rebound " +  player4.getdefRebound());
+            }else if(flag5 == true){
+                player5.subdefRebound();
+                System.out.println("sub player5 " + " Def Rebound " +  player5.getdefRebound());
+            }else if(flagOpp == true){
+                playerOpp.subdefRebound();
+                System.out.println("sub Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+            }
+        }else{
+            if (flag1 == true){
+                player1.adddefRebound();
+                System.out.println("player1 " + " Def Rebound " +  player1.getdefRebound());
+            }else if(flag2 == true){
+                player2.adddefRebound();
+                System.out.println("player2 " + " Def Rebound " +  player2.getdefRebound());
+            }else if(flag3 == true){
+                player3.adddefRebound();
+                System.out.println("player3 " + " Def Rebound " +  player3.getdefRebound());
+            }else if(flag4 == true){
+                player4.adddefRebound();
+                System.out.println("player4 " + " Def Rebound " +  player4.getdefRebound());
+            }else if(flag5 == true){
+                player5.adddefRebound();
+                System.out.println("player5 " + " Def Rebound " +  player5.getdefRebound());
+            }else if(flagOpp == true){
+                playerOpp.adddefRebound();
+                System.out.println("Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+            }
+        }
+    }//GEN-LAST:event_defReboundButtonActionPerformed
+
+    private void assistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assistButtonActionPerformed
+        // Assists Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subAssist();
+                System.out.println("sub player1 " + " Assist " +  player1.getAssist());
+            }else if(flag2 == true){
+                player2.subAssist();
+                System.out.println("sub player2 " + " Assist " +  player2.getAssist());
+            }else if(flag3 == true){
+                player3.subAssist();
+                System.out.println("sub player3 " + " Assist " +  player3.getAssist());
+            }else if(flag4 == true){
+                player4.subAssist();
+                System.out.println("sub player4 " + " Assist " +  player4.getAssist());
+            }else if(flag5 == true){
+                player5.subAssist();
+                System.out.println("sub player5 " + " Assist " +  player5.getAssist());
+            }else if(flagOpp == true){
+                playerOpp.subAssist();
+                System.out.println("sub Opponent " + " Assist " +  playerOpp.getAssist());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addAssist();
+                System.out.println("player1 " + " Assist " +  player1.getAssist());
+            }else if(flag2 == true){
+                player2.addAssist();
+                System.out.println("player2 " + " Assist " +  player2.getAssist());
+            }else if(flag3 == true){
+                player3.addAssist();
+                System.out.println("player3 " + " Assist " +  player3.getAssist());
+            }else if(flag4 == true){
+                player4.addAssist();
+                System.out.println("player4 " + " Assist " +  player4.getAssist());
+            }else if(flag5 == true){
+                player5.addAssist();
+                System.out.println("player5 " + " Assist " +  player5.getAssist());
+            }else if(flagOpp == true){
+                playerOpp.addAssist();
+                System.out.println("Opponent " + " Assist " +  playerOpp.getAssist());
+            }
+        }
+    }//GEN-LAST:event_assistButtonActionPerformed
+
+    private void turnoverButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnoverButtonActionPerformed
+        // Turnover Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subTurnover();
+                System.out.println("sub player1 " + " Turnover " +  player1.getTurnover());
+            }else if(flag2 == true){
+                player2.subTurnover();
+                System.out.println("sub player2 " + " Turnover " +  player2.getTurnover());
+            }else if(flag3 == true){
+                player3.subTurnover();
+                System.out.println("sub player3 " + " Turnover " +  player3.getTurnover());
+            }else if(flag4 == true){
+                player4.subTurnover();
+                System.out.println("sub player4 " + " Turnover " +  player4.getTurnover());
+            }else if(flag5 == true){
+                player5.subTurnover();
+                System.out.println("sub player5 " + " Turnover " +  player5.getTurnover());
+            }else if(flagOpp == true){
+                playerOpp.subTurnover();
+                System.out.println("sub Opponent " + " Turnover " +  playerOpp.getTurnover());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addTurnover();
+                System.out.println("player1 " + " Turnover " +  player1.getTurnover());
+            }else if(flag2 == true){
+                player2.addTurnover();
+                System.out.println("player2 " + " Turnover " +  player2.getTurnover());
+            }else if(flag3 == true){
+                player3.addTurnover();
+                System.out.println("player3 " + " Turnover " +  player3.getTurnover());
+            }else if(flag4 == true){
+                player4.addTurnover();
+                System.out.println("player4 " + " Turnover " +  player4.getTurnover());
+            }else if(flag5 == true){
+                player5.addTurnover();
+                System.out.println("player5 " + " Turnover " +  player5.getTurnover());
+            }else if(flagOpp == true){
+                playerOpp.addTurnover();
+                System.out.println("Opponent " + " Turnover " +  playerOpp.getTurnover());
+            }
+        }
+    }//GEN-LAST:event_turnoverButtonActionPerformed
+
+    private void stealButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stealButtonActionPerformed
+        // Steal Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subSteal();
+                System.out.println("sub player1 " + " Steal " +  player1.getSteal());
+            }else if(flag2 == true){
+                player2.subSteal();
+                System.out.println("sub player2 " + " Steal " +  player2.getSteal());
+            }else if(flag3 == true){
+                player3.subSteal();
+                System.out.println("sub player3 " + " Steal " +  player3.getSteal());
+            }else if(flag4 == true){
+                player4.subSteal();
+                System.out.println("sub player4 " + " Steal " +  player4.getSteal());
+            }else if(flag5 == true){
+                player5.subSteal();
+                System.out.println("sub player5 " + " Steal " +  player5.getSteal());
+            }else if(flagOpp == true){
+                playerOpp.subSteal();
+                System.out.println("sub Opponent " + " Steal " +  playerOpp.getSteal());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addSteal();
+                System.out.println("player1 " + " Steal " +  player1.getSteal());
+            }else if(flag2 == true){
+                player2.addSteal();
+                System.out.println("player2 " + " Steal " +  player2.getSteal());
+            }else if(flag3 == true){
+                player3.addSteal();
+                System.out.println("player3 " + " Steal " +  player3.getSteal());
+            }else if(flag4 == true){
+                player4.addSteal();
+                System.out.println("player4 " + " Steal " +  player4.getSteal());
+            }else if(flag5 == true){
+                player5.addSteal();
+                System.out.println("player5 " + " Steal " +  player5.getSteal());
+            }else if(flagOpp == true){
+                playerOpp.addSteal();
+                System.out.println("Opponent " + " Steal " +  playerOpp.getSteal());
+            }
+        }
+    }//GEN-LAST:event_stealButtonActionPerformed
+
+    private void blockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockButtonActionPerformed
+        // Block Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subBlock();
+                System.out.println("sub player1 " + " Block " +  player1.getBlock());
+            }else if(flag2 == true){
+                player2.subBlock();
+                System.out.println("sub player2 " + " Block " +  player2.getBlock());
+            }else if(flag3 == true){
+                player3.subBlock();
+                System.out.println("sub player3 " + " Block " +  player3.getBlock());
+            }else if(flag4 == true){
+                player4.subBlock();
+                System.out.println("sub player4 " + " Block " +  player4.getBlock());
+            }else if(flag5 == true){
+                player5.subBlock();
+                System.out.println("sub player5 " + " Block " +  player5.getBlock());
+            }else if(flagOpp == true){
+                playerOpp.subBlock();
+                System.out.println("sub Opponent " + " Block " +  playerOpp.getBlock());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addBlock();
+                System.out.println("player1 " + " Block " +  player1.getBlock());
+            }else if(flag2 == true){
+                player2.addBlock();
+                System.out.println("player2 " + " Block " +  player2.getBlock());
+            }else if(flag3 == true){
+                player3.addBlock();
+                System.out.println("player3 " + " Block " +  player3.getBlock());
+            }else if(flag4 == true){
+                player4.addBlock();
+                System.out.println("player4 " + " Block " +  player4.getBlock());
+            }else if(flag5 == true){
+                player5.addBlock();
+                System.out.println("player5 " + " Block " +  player5.getBlock());
+            }else if(flagOpp == true){
+                playerOpp.addBlock();
+                System.out.println("Opponent " + " Block " +  playerOpp.getBlock());
+            }
+        }
+    }//GEN-LAST:event_blockButtonActionPerformed
+
+    private void menuNameEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit1ActionPerformed
+        // Edit name of Player 1
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player1.getName() + " :");
+        player1.setName(newName);
+        player1But.setText(player1.getName());
+        menuNameEdit1.setText(newName);
+    }//GEN-LAST:event_menuNameEdit1ActionPerformed
+
+    private void menuNameEdit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit2ActionPerformed
+        // Edit name of Player 2
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player2.getName() + " :");
+        player2.setName(newName);
+        player2But.setText(player2.getName());
+        menuNameEdit2.setText(newName);
+    }//GEN-LAST:event_menuNameEdit2ActionPerformed
+
+    private void menuNameEdit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit3ActionPerformed
+        // Edit name of Player 3
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player3.getName() + " :");
+        player3.setName(newName);
+        player3But.setText(player3.getName());
+        menuNameEdit3.setText(newName);
+    }//GEN-LAST:event_menuNameEdit3ActionPerformed
+
+    private void menuNameEdit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit4ActionPerformed
+        // Edit name of Player 4
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player4.getName() + " :");
+        player4.setName(newName);
+        player4But.setText(player3.getName());
+        menuNameEdit4.setText(newName);
+    }//GEN-LAST:event_menuNameEdit4ActionPerformed
+
+    private void menuNameEdit5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit5ActionPerformed
+        // Edit name of Player 5
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player5.getName() + " :");
+        player5.setName(newName);
+        player5But.setText(player5.getName());
+        menuNameEdit5.setText(newName);
+    }//GEN-LAST:event_menuNameEdit5ActionPerformed
+
+    private void menuNameEditOppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEditOppActionPerformed
+        // Edit name of Player Opp
+        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + playerOpp.getName() + " :");
+        playerOpp.setName(newName);
+        oppBut.setText(playerOpp.getName());
+        menuNameEditOpp.setText(newName);
+    }//GEN-LAST:event_menuNameEditOppActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -920,6 +1330,22 @@ public class BballUI extends javax.swing.JFrame {
         teamdefRebound = (player1.getdefRebound() + player2.getdefRebound() + player3.getdefRebound() + player4.getdefRebound() + player5.getdefRebound());
         return teamdefRebound;
     }
+    public int calculateteamAssist(){
+        teamAssist = (player1.getAssist() + player2.getAssist() + player3.getAssist() + player4.getAssist() + player5.getAssist());
+        return teamAssist;
+    }
+    public int calculateteamTurnover(){
+        teamTurnover = (player1.getTurnover() + player2.getTurnover() + player3.getTurnover() + player4.getTurnover() + player5.getTurnover());
+        return teamTurnover;
+    }
+    public int calculateteamSteal(){
+        teamSteal = (player1.getSteal() + player2.getSteal() + player3.getSteal() + player4.getSteal() + player5.getSteal());
+        return teamSteal;
+    }
+    public int calculateteamBlock(){
+        teamBlock = (player1.getBlock() + player2.getBlock() + player3.getBlock() + player4.getBlock() + player5.getBlock());
+        return teamBlock;
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -960,6 +1386,9 @@ public class BballUI extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton RBSubtract;
+    private javax.swing.JButton assistButton;
+    private javax.swing.JButton blockButton;
+    private javax.swing.JButton defReboundButton;
     private javax.swing.JButton ftMakeButton;
     private javax.swing.JButton ftMissButton;
     private javax.swing.JButton jButton1;
@@ -987,12 +1416,6 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -1007,6 +1430,7 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1029,14 +1453,23 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JMenu menuEditNames;
+    private javax.swing.JMenuItem menuNameEdit1;
+    private javax.swing.JMenuItem menuNameEdit2;
+    private javax.swing.JMenuItem menuNameEdit3;
+    private javax.swing.JMenuItem menuNameEdit4;
+    private javax.swing.JMenuItem menuNameEdit5;
+    private javax.swing.JMenuItem menuNameEditOpp;
+    private javax.swing.JButton offReboundButton;
     private javax.swing.JButton oppBut;
     private javax.swing.JButton player1But;
     private javax.swing.JButton player2But;
     private javax.swing.JButton player3But;
     private javax.swing.JButton player4But;
     private javax.swing.JButton player5But;
+    private javax.swing.JButton stealButton;
     private javax.swing.JButton threeMakeButton;
     private javax.swing.JButton threeMissButton;
+    private javax.swing.JButton turnoverButton;
     private javax.swing.JButton twoMakeButton;
     private javax.swing.JButton twoMissButton;
     // End of variables declaration//GEN-END:variables

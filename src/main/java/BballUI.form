@@ -7,6 +7,11 @@
         <Property name="text" type="java.lang.String" value="jMenuItem1"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JMenuItem" name="jMenuItem2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenuItem2"/>
+      </Properties>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -23,6 +28,56 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edit Player Names"/>
               </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEdit1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Player 1"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEdit1ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEdit2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Player 2"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEdit2ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEdit3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Player 3"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEdit3ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEdit4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Player4"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEdit4ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEdit5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Player 5"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEdit5ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuNameEditOpp">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Opponent"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuNameEditOppActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
             </Menu>
           </SubComponents>
         </Menu>
@@ -517,11 +572,11 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jButton43" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="offReboundButton" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton44" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="assistButton" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton45" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="turnoverButton" min="-2" pref="90" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="37" max="32767" attributes="0"/>
@@ -535,9 +590,9 @@
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton43" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButton45" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButton44" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="offReboundButton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="turnoverButton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="assistButton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="15" max="32767" attributes="0"/>
                           </Group>
@@ -550,20 +605,29 @@
                         <Property name="text" type="java.lang.String" value="Offense"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton43">
+                    <Component class="javax.swing.JButton" name="offReboundButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Rebound"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="offReboundButtonActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton44">
+                    <Component class="javax.swing.JButton" name="assistButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Assist"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assistButtonActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton45">
+                    <Component class="javax.swing.JButton" name="turnoverButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Turnover"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turnoverButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -580,11 +644,11 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                      <Component id="jButton46" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="defReboundButton" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton47" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="stealButton" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton48" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="blockButton" min="-2" pref="90" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -598,10 +662,10 @@
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jButton48" pref="50" max="32767" attributes="0"/>
+                                  <Component id="blockButton" pref="50" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jButton46" pref="50" max="32767" attributes="0"/>
-                                      <Component id="jButton47" max="32767" attributes="0"/>
+                                      <Component id="defReboundButton" pref="50" max="32767" attributes="0"/>
+                                      <Component id="stealButton" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -615,20 +679,29 @@
                         <Property name="text" type="java.lang.String" value="Defense"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton46">
+                    <Component class="javax.swing.JButton" name="defReboundButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Rebound"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="defReboundButtonActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton47">
+                    <Component class="javax.swing.JButton" name="stealButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Steal"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stealButtonActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton48">
+                    <Component class="javax.swing.JButton" name="blockButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Block"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blockButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

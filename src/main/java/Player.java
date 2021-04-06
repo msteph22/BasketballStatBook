@@ -20,6 +20,10 @@ public class Player {
     private int threeMiss;
     private int offRebound;
     private int defRebound;
+    private int assists;
+    private int turnovers;
+    private int steals;
+    private int blocks;
 
     
     //following constructors
@@ -43,15 +47,17 @@ public class Player {
         threeMiss = 0;
         offRebound = 0;
         defRebound = 0;
-
+        assists = 0;
+        turnovers = 0;
+        steals = 0;
+        blocks = 0;
     } 
     public void setName(String name) {
         this.name = name;
     }
     public String getName(){
         return name;
-    }
-    
+    }  
     public void settotalPoints(int score){
         this.totalPoints = score;
     }
@@ -136,5 +142,41 @@ public class Player {
     }
     public int getdefRebound(){
         return defRebound;
+    }
+    public void addAssist(){
+        this.assists += 1;
+    }
+    public void subAssist(){
+        this.assists -= 1;
+    }
+    public int getAssist(){
+        return assists;
+    }
+    public void addTurnover(){
+        this.turnovers += 1;
+    }
+    public void subTurnover(){
+        this.turnovers -= 1;
+    }
+    public int getTurnover(){
+        return turnovers;
+    }
+    public void addSteal(){
+        this.steals += 1;
+    }
+    public void subSteal(){
+        this.steals -= 1;
+    }
+    public int getSteal(){
+        return steals;
+    }
+    public void addBlock(){
+        this.blocks += 1;
+    }
+    public void subBlock(){
+        this.blocks -= 1;
+    }
+    public int getBlock(){
+        return blocks;
     }
 }
