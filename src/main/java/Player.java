@@ -24,6 +24,7 @@ public class Player {
     private int turnovers;
     private int steals;
     private int blocks;
+    private int fouls;
 
     
     //following constructors
@@ -51,6 +52,7 @@ public class Player {
         turnovers = 0;
         steals = 0;
         blocks = 0;
+        fouls = 0;
     } 
     public void setName(String name) {
         this.name = name;
@@ -178,5 +180,14 @@ public class Player {
     }
     public int getBlock(){
         return blocks;
+    }
+    public void addFoul(){
+        this.fouls += 1;
+    }
+    public void subFoul(){
+        this.fouls -= 1;
+    }
+    public int getFoul(){
+        return fouls;
     }
 }
