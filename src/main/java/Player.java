@@ -14,18 +14,24 @@ public class Player {
     private int totalPoints;
     private int ftMake;
     private int ftMiss;
+    private int ftAtt;
+    private double ftPerc;
     private int twoMake;
     private int twoMiss;
+    private int twoAtt;
+    private double twoPerc;
     private int threeMake;
     private int threeMiss;
+    private int threeAtt;
+    private double threePerc;
     private int offRebound;
     private int defRebound;
+    private int totalRebound;
     private int assists;
     private int turnovers;
     private int steals;
     private int blocks;
     private int fouls;
-
     
     //following constructors
     //A constructor that accepts the following values as arguments and assigns 
@@ -86,6 +92,16 @@ public class Player {
     public int getftMiss(){
         return ftMiss;
     }
+    public int getftAtt(){
+        ftAtt = this.ftMiss + this.ftMake;
+        return ftAtt;
+    }
+    public double getftPerc(){
+        double num1 = this.ftMake;
+        double num2 = this.ftAtt;
+        ftPerc = (num1 / num2) * 100;     
+        return ftPerc;
+    }
     public void addtwoMake(){
         this.twoMake += 1;
         this.totalPoints += 2; 
@@ -107,6 +123,16 @@ public class Player {
     public int gettwoMiss(){
         return twoMiss;
     }
+    public int gettwoAtt(){
+        twoAtt = this.twoMiss + this.twoMake;
+        return twoAtt;
+    }
+    public double gettwoPerc(){
+        double num1 = this.twoMake;
+        double num2 = this.twoAtt;
+        twoPerc = (num1 / num2) * 100;
+        return twoPerc;
+    }
     public void addthreeMake(){
         this.threeMake += 1;
         this.totalPoints += 3;
@@ -127,6 +153,17 @@ public class Player {
     public int getthreeMiss(){
         return threeMiss;
     }
+    public int getthreeAtt(){
+        threeAtt = this.threeMiss + this.threeMake;
+        return threeAtt;
+    }
+    public double getthreePerc(){
+        System.out.println(this.threeMake + "    " + this.threeAtt);
+        double num1 = this.threeMake;
+        double num2 = this.threeAtt;
+        threePerc = ( num1 / num2) * 100;
+        return threePerc;
+    }
     public void addoffRebound(){
         this.offRebound += 1;
     }
@@ -144,6 +181,10 @@ public class Player {
     }
     public int getdefRebound(){
         return defRebound;
+    }
+    public int gettotalRebound(){
+        totalRebound = this.offRebound + this.defRebound;
+        return totalRebound;
     }
     public void addAssist(){
         this.assists += 1;
