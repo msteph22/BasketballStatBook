@@ -99,8 +99,12 @@ public class Player {
     public double getftPerc(){
         double num1 = this.ftMake;
         double num2 = this.ftAtt;
-        ftPerc = (num1 / num2) * 100;     
+        if (num2 <= 0){
+            return 0;
+        }else{
+            ftPerc = (num1 / num2) * 100;     
         return ftPerc;
+        }
     }
     public void addtwoMake(){
         this.twoMake += 1;
@@ -130,8 +134,12 @@ public class Player {
     public double gettwoPerc(){
         double num1 = this.twoMake;
         double num2 = this.twoAtt;
-        twoPerc = (num1 / num2) * 100;
+        if (num2 <= 0){
+            return 0;
+        }else{
+            twoPerc = (num1 / num2) * 100;
         return twoPerc;
+        }
     }
     public void addthreeMake(){
         this.threeMake += 1;
@@ -161,8 +169,12 @@ public class Player {
         System.out.println(this.threeMake + "    " + this.threeAtt);
         double num1 = this.threeMake;
         double num2 = this.threeAtt;
-        threePerc = ( num1 / num2) * 100;
-        return threePerc;
+        if (num2 <= 0){
+            return 0;
+        }else{
+            threePerc = ( num1 / num2) * 100;
+            return threePerc;
+        }
     }
     public void addoffRebound(){
         this.offRebound += 1;

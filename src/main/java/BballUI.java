@@ -1,4 +1,6 @@
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -51,6 +53,7 @@ public class BballUI extends javax.swing.JFrame {
      */
     public BballUI() {
         initComponents();
+        refreshTable();
     }
     
     /**
@@ -105,6 +108,7 @@ public class BballUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         statTable = new javax.swing.JTable();
         tableRefreshButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -597,16 +601,21 @@ public class BballUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel5.setText("Player Stats");
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 864, Short.MAX_VALUE)
+                .addComponent(jScrollPane2)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(384, 384, 384)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(235, 235, 235)
                 .addComponent(tableRefreshButton, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
@@ -614,10 +623,12 @@ public class BballUI extends javax.swing.JFrame {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tableRefreshButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tableRefreshButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(339, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Stat Sheet", jPanel17);
@@ -1387,16 +1398,7 @@ public class BballUI extends javax.swing.JFrame {
     }//GEN-LAST:event_foulButtonActionPerformed
 
     private void tableRefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableRefreshButtonActionPerformed
-        String[] columns = {"Name/Number", "2pt Att.", "2pt Made", "2pt %", "3pt Att.", "3pt Made", "3pt %", "FT Att.", "FT Made", "FT %",
-            "Off Reb", "Def Reb", "Total Reb", "Steals", "Turnovers", "Assists", "Blocks"};
-        String [][] data = {{String.valueOf(player1.getName()), String.valueOf(player1.gettwoAtt()), String.valueOf(player1.gettwoMake()),
-        String.valueOf(player1.gettwoPerc()) + "%", String.valueOf(player1.getthreeAtt()), String.valueOf(player1.getthreeMake()), String.valueOf(player1.getthreePerc()) + "%",
-        String.valueOf(player1.getftAtt()), String.valueOf(player1.getftMake()), String.valueOf(player1.getftPerc()) + "%", String.valueOf(player1.getoffRebound()),
-        String.valueOf(player1.getdefRebound()), String.valueOf(player1.gettotalRebound()), String.valueOf(player1.getSteal()),
-        String.valueOf(player1.getTurnover()), String.valueOf(player1.getAssist()), String.valueOf(player1.getBlock())}};
-        
-        DefaultTableModel model = (DefaultTableModel) statTable.getModel();
-        model.setDataVector(data,columns);
+        refreshTable();
     }//GEN-LAST:event_tableRefreshButtonActionPerformed
 
     /**
@@ -1469,6 +1471,54 @@ public class BballUI extends javax.swing.JFrame {
         teamFoul = (player1.getFoul() + player2.getFoul() + player3.getFoul() + player4.getFoul() + player5.getFoul());
         return teamBlock;
     }
+    public void refreshTable(){
+    String[] columns1 = {"Name/Number", "2pt Att.", "2pt Made", "2pt %", "3pt Att.", "3pt Made", "3pt %", "FT Att.", "FT Made", "FT %",
+            "Off Reb", "Def Reb", "Total Reb", "Steals", "Turnovers", "Assists", "Blocks", "Fouls"};
+        String [][] data1 = {{String.valueOf(player1.getName()), String.valueOf(player1.gettwoAtt()), String.valueOf(player1.gettwoMake()),
+        String.valueOf(player1.gettwoPerc()) + "%", String.valueOf(player1.getthreeAtt()), String.valueOf(player1.getthreeMake()), String.valueOf(player1.getthreePerc()) + "%",
+        String.valueOf(player1.getftAtt()), String.valueOf(player1.getftMake()), String.valueOf(player1.getftPerc()) + "%", String.valueOf(player1.getoffRebound()),
+        String.valueOf(player1.getdefRebound()), String.valueOf(player1.gettotalRebound()), String.valueOf(player1.getSteal()),
+        String.valueOf(player1.getTurnover()), String.valueOf(player1.getAssist()), String.valueOf(player1.getBlock()), String.valueOf(player1.getFoul())},
+        {String.valueOf(player2.getName()), String.valueOf(player2.gettwoAtt()), String.valueOf(player2.gettwoMake()),
+        String.valueOf(player2.gettwoPerc()) + "%", String.valueOf(player2.getthreeAtt()), String.valueOf(player2.getthreeMake()), String.valueOf(player2.getthreePerc()) + "%",
+        String.valueOf(player2.getftAtt()), String.valueOf(player2.getftMake()), String.valueOf(player2.getftPerc()) + "%", String.valueOf(player2.getoffRebound()),
+        String.valueOf(player2.getdefRebound()), String.valueOf(player2.gettotalRebound()), String.valueOf(player2.getSteal()),
+        String.valueOf(player2.getTurnover()), String.valueOf(player2.getAssist()), String.valueOf(player2.getBlock()), String.valueOf(player2.getFoul())},
+        {String.valueOf(player3.getName()), String.valueOf(player3.gettwoAtt()), String.valueOf(player3.gettwoMake()),
+        String.valueOf(player3.gettwoPerc()) + "%", String.valueOf(player3.getthreeAtt()), String.valueOf(player3.getthreeMake()), String.valueOf(player3.getthreePerc()) + "%",
+        String.valueOf(player3.getftAtt()), String.valueOf(player3.getftMake()), String.valueOf(player3.getftPerc()) + "%", String.valueOf(player3.getoffRebound()),
+        String.valueOf(player3.getdefRebound()), String.valueOf(player3.gettotalRebound()), String.valueOf(player3.getSteal()),
+        String.valueOf(player3.getTurnover()), String.valueOf(player3.getAssist()), String.valueOf(player3.getBlock()), String.valueOf(player3.getFoul())},
+        {String.valueOf(player4.getName()), String.valueOf(player4.gettwoAtt()), String.valueOf(player4.gettwoMake()),
+        String.valueOf(player4.gettwoPerc()) + "%", String.valueOf(player4.getthreeAtt()), String.valueOf(player4.getthreeMake()), String.valueOf(player4.getthreePerc()) + "%",
+        String.valueOf(player4.getftAtt()), String.valueOf(player4.getftMake()), String.valueOf(player4.getftPerc()) + "%", String.valueOf(player4.getoffRebound()),
+        String.valueOf(player4.getdefRebound()), String.valueOf(player4.gettotalRebound()), String.valueOf(player4.getSteal()),
+        String.valueOf(player4.getTurnover()), String.valueOf(player4.getAssist()), String.valueOf(player4.getBlock()), String.valueOf(player4.getFoul())},
+        {String.valueOf(player5.getName()), String.valueOf(player5.gettwoAtt()), String.valueOf(player5.gettwoMake()),
+        String.valueOf(player5.gettwoPerc()) + "%", String.valueOf(player5.getthreeAtt()), String.valueOf(player5.getthreeMake()), String.valueOf(player5.getthreePerc()) + "%",
+        String.valueOf(player5.getftAtt()), String.valueOf(player5.getftMake()), String.valueOf(player5.getftPerc()) + "%", String.valueOf(player5.getoffRebound()),
+        String.valueOf(player5.getdefRebound()), String.valueOf(player5.gettotalRebound()), String.valueOf(player5.getSteal()),
+        String.valueOf(player5.getTurnover()), String.valueOf(player5.getAssist()), String.valueOf(player5.getBlock()), String.valueOf(player5.getFoul())}};
+        
+        DefaultTableModel table1 = (DefaultTableModel) statTable.getModel();
+        table1.setDataVector(data1,columns1);
+        statTable.setRowHeight(30);
+        //Set Column Widths
+        statTable.getColumnModel().getColumn(0).setPreferredWidth(100);
+        statTable.getColumnModel().getColumn(1).setPreferredWidth(55);
+        statTable.getColumnModel().getColumn(2).setPreferredWidth(65);
+        statTable.getColumnModel().getColumn(3).setPreferredWidth(55);
+        statTable.getColumnModel().getColumn(4).setPreferredWidth(55);
+        statTable.getColumnModel().getColumn(5).setPreferredWidth(65);
+        statTable.getColumnModel().getColumn(6).setPreferredWidth(55);
+        statTable.getColumnModel().getColumn(7).setPreferredWidth(65);
+        statTable.getColumnModel().getColumn(8).setPreferredWidth(55);
+        statTable.getColumnModel().getColumn(9).setPreferredWidth(65);
+        statTable.getColumnModel().getColumn(10).setPreferredWidth(55);
+        statTable.setBorder(BorderFactory.createEmptyBorder(12,12,12,12));
+        statTable.setShowGrid(true);
+        statTable.setGridColor(Color.LIGHT_GRAY);
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1517,6 +1567,7 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
