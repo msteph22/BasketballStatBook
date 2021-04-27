@@ -8,16 +8,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author stephensmac
- */
 public class BballUI extends javax.swing.JFrame {
 
     Player player1 = new Player();
@@ -88,25 +78,29 @@ public class BballUI extends javax.swing.JFrame {
         oppBut = new javax.swing.JButton();
         RBSubtract = new javax.swing.JRadioButton();
         jPanel13 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        teamScoreBoard = new javax.swing.JLabel();
+        oppScoreBoard = new javax.swing.JLabel();
+        teamFoulBoard = new javax.swing.JLabel();
+        oppFoulBoard = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         ftMakeButton = new javax.swing.JButton();
         twoMakeButton = new javax.swing.JButton();
         threeMakeButton = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         ftMissButton = new javax.swing.JButton();
         twoMissButton = new javax.swing.JButton();
         threeMissButton = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         offReboundButton = new javax.swing.JButton();
         assistButton = new javax.swing.JButton();
         turnoverButton = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         defReboundButton = new javax.swing.JButton();
         stealButton = new javax.swing.JButton();
         blockButton = new javax.swing.JButton();
@@ -138,7 +132,10 @@ public class BballUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel5.setBackground(new java.awt.Color(153, 255, 255));
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         player1But.setText("Player 1");
         player1But.addActionListener(new java.awt.event.ActionListener() {
@@ -193,21 +190,22 @@ public class BballUI extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(player4But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(player5But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
                         .addComponent(player1But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(player2But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
-                        .addComponent(player3But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(player3But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(player4But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(player5But, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(144, 144, 144)))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(RBSubtract)
                     .addComponent(oppBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -227,33 +225,120 @@ public class BballUI extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(player4But, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(player5But, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
-                        .addContainerGap(62, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(oppBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(RBSubtract)
-                        .addGap(26, 26, 26))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                        .addComponent(RBSubtract)))
+                .addGap(26, 26, 26))
         );
 
         jPanel13.setBackground(new java.awt.Color(51, 51, 51));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
 
+        jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Team");
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Opp");
+
+        teamScoreBoard.setBackground(new java.awt.Color(204, 204, 204));
+        teamScoreBoard.setFont(new java.awt.Font("Verdana", 1, 35)); // NOI18N
+        teamScoreBoard.setForeground(new java.awt.Color(255, 0, 0));
+        teamScoreBoard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        teamScoreBoard.setText("00");
+        teamScoreBoard.setToolTipText("");
+        teamScoreBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        oppScoreBoard.setFont(new java.awt.Font("Verdana", 1, 35)); // NOI18N
+        oppScoreBoard.setForeground(new java.awt.Color(255, 0, 0));
+        oppScoreBoard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        oppScoreBoard.setText("00");
+        oppScoreBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        teamFoulBoard.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        teamFoulBoard.setForeground(new java.awt.Color(255, 204, 0));
+        teamFoulBoard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        teamFoulBoard.setText("0");
+        teamFoulBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        oppFoulBoard.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        oppFoulBoard.setForeground(new java.awt.Color(255, 204, 0));
+        oppFoulBoard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        oppFoulBoard.setText("0");
+        oppFoulBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        jLabel13.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Fouls");
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Fouls");
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel14))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(teamFoulBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(teamScoreBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel13))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(oppFoulBoard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(oppScoreBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(23, 23, 23))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(teamScoreBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(oppScoreBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(oppFoulBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(teamFoulBoard, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel14.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel14.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jPanel4.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel1.setText("Make");
+        jPanel4.setBackground(new java.awt.Color(0, 204, 0));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Makes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 14))); // NOI18N
 
         ftMakeButton.setText("FT");
         ftMakeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -280,43 +365,24 @@ public class BballUI extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ftMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(twoMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(threeMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(twoMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(threeMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(ftMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(29, 29, 29)
+                .addGap(31, 31, 31)
                 .addComponent(ftMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(twoMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(threeMakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jPanel16.setBackground(new java.awt.Color(255, 51, 51));
-
-        jLabel2.setText("Miss");
+        jPanel16.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Misses", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 14))); // NOI18N
 
         ftMissButton.setText("FT");
         ftMissButton.addActionListener(new java.awt.event.ActionListener() {
@@ -343,32 +409,18 @@ public class BballUI extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(twoMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(threeMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ftMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(threeMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(twoMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(ftMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(28, 28, 28)
+                .addGap(31, 31, 31)
                 .addComponent(ftMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(twoMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(threeMissButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -379,17 +431,21 @@ public class BballUI extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 31, Short.MAX_VALUE))
         );
 
-        jLabel3.setText("Offense");
+        jPanel18.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("Offense"));
 
         offReboundButton.setText("Rebound");
         offReboundButton.addActionListener(new java.awt.event.ActionListener() {
@@ -417,33 +473,27 @@ public class BballUI extends javax.swing.JFrame {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(offReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(assistButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(turnoverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(offReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(assistButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(turnoverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(offReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(turnoverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(assistButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jLabel4.setText("Defense");
+        jPanel19.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder("Defense"));
 
         defReboundButton.setText("Rebound");
         defReboundButton.addActionListener(new java.awt.event.ActionListener() {
@@ -470,31 +520,24 @@ public class BballUI extends javax.swing.JFrame {
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(defReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(stealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(blockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(defReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(stealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(blockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(blockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(defReboundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(stealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(blockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
         );
 
         foulButton.setText("Foul");
@@ -510,16 +553,16 @@ public class BballUI extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
+                        .addGap(97, 97, 97)
                         .addComponent(foulButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -528,22 +571,16 @@ public class BballUI extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(foulButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 40, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(foulButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        displayList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(displayList);
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
@@ -573,7 +610,7 @@ public class BballUI extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -592,6 +629,8 @@ public class BballUI extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("User Interface", jPanel9);
+
+        jPanel17.setBackground(new java.awt.Color(102, 102, 102));
 
         statTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -613,6 +652,7 @@ public class BballUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel5.setText("Player Stats");
 
@@ -740,553 +780,113 @@ public class BballUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     DefaultListModel mod = new DefaultListModel();
-    //Register Button Press for player 1
-    private void player1ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player1ButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flag1 = true;
-    }//GEN-LAST:event_player1ButActionPerformed
-    //Register Button Press for player 2
-    private void player2ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player2ButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flag2 = true;
-    }//GEN-LAST:event_player2ButActionPerformed
-    //Register Button Press for player 3
-    private void player3ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player3ButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flag3 = true;
-    }//GEN-LAST:event_player3ButActionPerformed
-    //Register Button Press for player 4
-    private void player4ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player4ButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flag4 = true;
-    }//GEN-LAST:event_player4ButActionPerformed
-    //Register Button Press for player 5
-    private void player5ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player5ButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flag5 = true;
-    }//GEN-LAST:event_player5ButActionPerformed
-    //Register Button Press for playerOpp
-    private void oppButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oppButActionPerformed
-        // TODO add your handling code here:
-        resetFlags();
-        flagOpp = true;
-    }//GEN-LAST:event_oppButActionPerformed
-
     
-    private void RBSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBSubtractActionPerformed
-        // PlaceHolder
-    }//GEN-LAST:event_RBSubtractActionPerformed
+    
+    private void menuNameEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit1ActionPerformed
+        // Edit name of Player 1
+        String newName = "";
+            while(newName.equals("")){
+                newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player1.getName() + " :");
+            }
+        player1.setName(newName);
+        player1But.setText(player1.getName());
+        menuNameEdit1.setText(newName);
+    }//GEN-LAST:event_menuNameEdit1ActionPerformed
 
-    private void ftMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMakeButtonActionPerformed
+    private void menuNameEdit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit2ActionPerformed
+        // Edit name of Player 2
+        String newName = "";
+            while(newName.equals("")){
+                newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player2.getName() + " :");
+            }
+        player2.setName(newName);
+        player2But.setText(player2.getName());
+        menuNameEdit2.setText(newName);
+    }//GEN-LAST:event_menuNameEdit2ActionPerformed
+
+    private void menuNameEdit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit3ActionPerformed
+        // Edit name of Player 3
+        String newName = "";
+            while(newName.equals("")){
+                newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player3.getName() + " :");
+            }
+        player3.setName(newName);
+        player3But.setText(player3.getName());
+        menuNameEdit3.setText(newName);
+    }//GEN-LAST:event_menuNameEdit3ActionPerformed
+
+    private void menuNameEdit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit4ActionPerformed
+        // Edit name of Player 4
+        String newName = "";
+            while(newName.equals("")){
+                newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player4.getName() + " :");
+            }
+        player4.setName(newName);
+        player4But.setText(player4.getName());
+        menuNameEdit4.setText(newName);
+    }//GEN-LAST:event_menuNameEdit4ActionPerformed
+
+    private void menuNameEdit5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit5ActionPerformed
+        // Edit name of Player 5
+        String newName = "";
+            while(newName.equals("")){
+                newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player5.getName() + " :");
+            }
+        player5.setName(newName);
+        player5But.setText(player5.getName());
+        menuNameEdit5.setText(newName);
+    }//GEN-LAST:event_menuNameEdit5ActionPerformed
+
+    private void tableRefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableRefreshButtonActionPerformed
+        refreshTable();
+    }//GEN-LAST:event_tableRefreshButtonActionPerformed
+
+    private void foulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foulButtonActionPerformed
         displayList.setModel(mod);
-        // FreeThrow Make Actions and Logs
+        // Foul Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
-                player1.subftMake();
-                mod.addElement("sub player1 " + "FT Make, Points: " + player1.gettotalPoints());
+                player1.subFoul();
+                mod.addElement("sub player1"  + " Foul " +  player1.getFoul());
             }else if(flag2 == true){
-                player2.subftMake();
-                mod.addElement("sub player2 " + "FT Make, Points: " + player2.gettotalPoints());
+                player2.subFoul();
+                mod.addElement("sub player2 " + " Foul " +  player2.getFoul());
             }else if(flag3 == true){
-                player3.subftMake();
-                mod.addElement("sub player3 " + "FT Make, Points: " + player3.gettotalPoints());
+                player3.subFoul();
+                mod.addElement("sub player3 " + " Foul " +  player3.getFoul());
             }else if(flag4 == true){
-                player4.subftMake();
-                mod.addElement("sub player4 " + "FT Make, Points: " + player4.gettotalPoints());
+                player4.subFoul();
+                mod.addElement("sub player4 " + " Foul " +  player4.getFoul());
             }else if(flag5 == true){
-                player5.subftMake();
-                mod.addElement("sub player5 " + "FT Make, Points: " + player5.gettotalPoints());
+                player5.subFoul();
+                mod.addElement("sub player5 " + " Foul " +  player5.getFoul());
             }else if(flagOpp == true){
-                playerOpp.subftMake();
-                mod.addElement("sub Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
+                playerOpp.subFoul();
+                mod.addElement("sub Opponent " + " Foul " +  playerOpp.getFoul());
             }
         }else{
             if (flag1 == true){
-                player1.addftMake();
-                mod.addElement("player1 " + "FT Make, Points: " + player1.gettotalPoints());
+                player1.addFoul();
+                mod.addElement("player1 " + " Foul " +  player1.getFoul());
             }else if(flag2 == true){
-                player2.addftMake();
-                mod.addElement("player2 " + "FT Make, Points: " + player2.gettotalPoints());
+                player2.addFoul();
+                mod.addElement("player2 " + " Foul " +  player2.getFoul());
             }else if(flag3 == true){
-                player3.addftMake();
-                mod.addElement("player3 " + "FT Make, Points: " + player3.gettotalPoints());
+                player3.addFoul();
+                mod.addElement("player3 " + " Foul " +  player3.getFoul());
             }else if(flag4 == true){
-                player4.addftMake();
-                mod.addElement("player4 " + "FT Make, Points: " + player4.gettotalPoints());
+                player4.addFoul();
+                mod.addElement("player4 " + " Foul " +  player4.getFoul());
             }else if(flag5 == true){
-                player5.addftMake();
-                mod.addElement("player5 " + "FT Make, Points: " + player5.gettotalPoints());
+                player5.addFoul();
+                mod.addElement("player5 " + " Foul " +  player5.getFoul());
             }else if(flagOpp == true){
-                playerOpp.addftMake();
-                mod.addElement("Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
+                playerOpp.addFoul();
+                mod.addElement("Opponent " + " Foul " +  playerOpp.getFoul());
             }
         }
-    }//GEN-LAST:event_ftMakeButtonActionPerformed
-
-    private void ftMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMissButtonActionPerformed
-        displayList.setModel(mod);
-        // FreeThrow Miss Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subftMiss();
-                mod.addElement("sub player1 " + "FT Miss, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.subftMiss();
-                mod.addElement("sub player2 " + "FT Miss, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.subftMiss();
-                mod.addElement("sub player3 " + "FT Miss, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.subftMiss();
-                mod.addElement("sub player4 " + "FT Miss, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.subftMiss();
-                mod.addElement("sub player5 " + "FT Miss, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.subftMiss();
-                mod.addElement("sub Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addftMiss();
-                mod.addElement("player1 " + "FT Miss, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.addftMiss();
-                mod.addElement("player2 " + "FT Miss, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.addftMiss();
-                mod.addElement("player3 " + "FT Miss, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.addftMiss();
-                mod.addElement("player4 " + "FT Miss, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.addftMiss();
-                mod.addElement("player5 " + "FT Miss, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.addftMiss();
-                mod.addElement("Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
-            }
-        }
-    }//GEN-LAST:event_ftMissButtonActionPerformed
-
-    private void twoMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoMakeButtonActionPerformed
-        displayList.setModel(mod);
-        // 2pt Make Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subtwoMake();
-                mod.addElement("sub player1 " + "2pt Make, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.subtwoMake();
-                mod.addElement("sub player2 " + "2pt Make, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.subtwoMake();
-                mod.addElement("sub player3 " + "2pt Make, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.subtwoMake();
-                mod.addElement("sub player4 " + "2pt Make, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.subtwoMake();
-                mod.addElement("sub player5 " + "2pt Make, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.subtwoMake();
-                mod.addElement("sub Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addtwoMake();
-                mod.addElement("player1 " + "2pt Make, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.addtwoMake();
-                mod.addElement("player2 " + "2pt Make, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.addtwoMake();
-                mod.addElement("player3 " + "2pt Make, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.addtwoMake();
-                mod.addElement("player4 " + "2pt Make, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.addtwoMake();
-                mod.addElement("player5 " + "2pt Make, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.addtwoMake();
-                mod.addElement("Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
-            }
-        }
-    }//GEN-LAST:event_twoMakeButtonActionPerformed
-
-    private void twoMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoMissButtonActionPerformed
-        displayList.setModel(mod);
-        // TODO add your handling code here:
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subtwoMiss();
-                mod.addElement("sub player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.subtwoMiss();
-                mod.addElement("sub player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.subtwoMiss();
-                mod.addElement("sub player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.subtwoMiss();
-                mod.addElement("sub player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.subtwoMiss();
-                mod.addElement("sub player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.subtwoMiss();
-                mod.addElement("sub Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addtwoMiss();
-                mod.addElement("player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.addtwoMiss();
-                mod.addElement("player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.addtwoMiss();
-                mod.addElement("player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.addtwoMiss();
-                mod.addElement("player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.addtwoMiss();
-                mod.addElement("player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.addtwoMiss();
-                mod.addElement("Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
-            }
-        }
-    }//GEN-LAST:event_twoMissButtonActionPerformed
-
-    private void threeMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMakeButtonActionPerformed
-        displayList.setModel(mod);
-        // 3pt Make Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subthreeMake();
-                mod.addElement("sub player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.subthreeMake();
-                mod.addElement("sub player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.subthreeMake();
-                mod.addElement("sub player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.subthreeMake();
-                mod.addElement("sub player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.subthreeMake();
-                mod.addElement("sub player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.subthreeMake();
-                mod.addElement("sub Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addthreeMake();
-                mod.addElement("player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.addthreeMake();
-                mod.addElement("player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.addthreeMake();
-                mod.addElement("player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.addthreeMake();
-                mod.addElement("player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.addthreeMake();
-                mod.addElement("player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.addthreeMake();
-                mod.addElement("Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
-            }
-        }
-    }//GEN-LAST:event_threeMakeButtonActionPerformed
-
-    private void threeMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMissButtonActionPerformed
-        displayList.setModel(mod);
-        // 3pt Miss Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subthreeMiss();
-                mod.addElement("sub player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.subthreeMiss();
-                mod.addElement("sub player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.subthreeMiss();
-                mod.addElement("sub player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.subthreeMiss();
-                mod.addElement("sub player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.subthreeMiss();
-                mod.addElement("sub player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.subthreeMiss();
-                mod.addElement("sub Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addthreeMiss();
-                mod.addElement("player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
-            }else if(flag2 == true){
-                player2.addthreeMiss();
-                mod.addElement("player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
-            }else if(flag3 == true){
-                player3.addthreeMiss();
-                mod.addElement("player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
-            }else if(flag4 == true){
-                player4.addthreeMiss();
-                mod.addElement("player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
-            }else if(flag5 == true){
-                player5.addthreeMiss();
-                mod.addElement("player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
-            }else if(flagOpp == true){
-                playerOpp.addthreeMiss();
-                mod.addElement("Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
-            }
-        }
-    }//GEN-LAST:event_threeMissButtonActionPerformed
-
-    private void offReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offReboundButtonActionPerformed
-        displayList.setModel(mod);
-        // Offensive Rebound Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.suboffRebound();
-                mod.addElement("sub player1 " + "Off Reb " +  player1.getoffRebound());
-            }else if(flag2 == true){
-                player2.suboffRebound();
-                mod.addElement("sub player2 " + "Off Reb " +  player2.getoffRebound());
-            }else if(flag3 == true){
-                player3.suboffRebound();
-                mod.addElement("sub player3 " + "Off Reb " +  player3.getoffRebound());
-            }else if(flag4 == true){
-                player4.suboffRebound();
-                mod.addElement("sub player4 " + "Off Reb " +  player4.getoffRebound());
-            }else if(flag5 == true){
-                player5.suboffRebound();
-                mod.addElement("sub player5 " + "Off Reb " +  player5.getoffRebound());
-            }else if(flagOpp == true){
-                playerOpp.suboffRebound();
-                mod.addElement("sub Opponent " + "Off Reb " +  playerOpp.getoffRebound());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addoffRebound();
-                mod.addElement("player1 " + "Off Reb " +  player1.getoffRebound());
-            }else if(flag2 == true){
-                player2.addoffRebound();
-                mod.addElement("player2 " + "Off Reb " +  player2.getoffRebound());
-            }else if(flag3 == true){
-                player3.addoffRebound();
-                mod.addElement("player3 " + "Off Reb " +  player3.getoffRebound());
-            }else if(flag4 == true){
-                player4.addoffRebound();
-                mod.addElement("player4 " + "Off Reb " +  player4.getoffRebound());
-            }else if(flag5 == true){
-                player5.addoffRebound();
-                mod.addElement("player5 " + "Off Reb " +  player5.getoffRebound());
-            }else if(flagOpp == true){
-                playerOpp.addoffRebound();
-                mod.addElement("Opponent " + "Off Reb " +  playerOpp.getoffRebound());
-            }
-        }                            
-    }//GEN-LAST:event_offReboundButtonActionPerformed
-
-    private void defReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_defReboundButtonActionPerformed
-        displayList.setModel(mod);
-        // Defensive Rebound Actions and Logs
-         if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subdefRebound();
-                mod.addElement("sub player1 " + " Def Rebound " +  player1.getdefRebound());
-            }else if(flag2 == true){
-                player2.subdefRebound();
-                mod.addElement("sub player2 " + " Def Rebound " +  player2.getdefRebound());
-            }else if(flag3 == true){
-                player3.subdefRebound();
-                mod.addElement("sub player3 " + " Def Rebound " +  player3.getdefRebound());
-            }else if(flag4 == true){
-                player4.subdefRebound();
-                mod.addElement("sub player4 " + " Def Rebound " +  player4.getdefRebound());
-            }else if(flag5 == true){
-                player5.subdefRebound();
-                mod.addElement("sub player5 " + " Def Rebound " +  player5.getdefRebound());
-            }else if(flagOpp == true){
-                playerOpp.subdefRebound();
-                mod.addElement("sub Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
-            }
-        }else{
-            if (flag1 == true){
-                player1.adddefRebound();
-                mod.addElement("player1 " + " Def Rebound " +  player1.getdefRebound());
-            }else if(flag2 == true){
-                player2.adddefRebound();
-                mod.addElement("player2 " + " Def Rebound " +  player2.getdefRebound());
-            }else if(flag3 == true){
-                player3.adddefRebound();
-                mod.addElement("player3 " + " Def Rebound " +  player3.getdefRebound());
-            }else if(flag4 == true){
-                player4.adddefRebound();
-                mod.addElement("player4 " + " Def Rebound " +  player4.getdefRebound());
-            }else if(flag5 == true){
-                player5.adddefRebound();
-                mod.addElement("player5 " + " Def Rebound " +  player5.getdefRebound());
-            }else if(flagOpp == true){
-                playerOpp.adddefRebound();
-                mod.addElement("Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
-            }
-        }
-    }//GEN-LAST:event_defReboundButtonActionPerformed
-
-    private void assistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assistButtonActionPerformed
-        displayList.setModel(mod);
-        // Assists Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subAssist();
-                mod.addElement("sub player1 " + " Assist " +  player1.getAssist());
-            }else if(flag2 == true){
-                player2.subAssist();
-                mod.addElement("sub player2 " + " Assist " +  player2.getAssist());
-            }else if(flag3 == true){
-                player3.subAssist();
-                mod.addElement("sub player3 " + " Assist " +  player3.getAssist());
-            }else if(flag4 == true){
-                player4.subAssist();
-                mod.addElement("sub player4 " + " Assist " +  player4.getAssist());
-            }else if(flag5 == true){
-                player5.subAssist();
-                mod.addElement("sub player5 " + " Assist " +  player5.getAssist());
-            }else if(flagOpp == true){
-                playerOpp.subAssist();
-                mod.addElement("sub Opponent " + " Assist " +  playerOpp.getAssist());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addAssist();
-                mod.addElement("player1 " + " Assist " +  player1.getAssist());
-            }else if(flag2 == true){
-                player2.addAssist();
-                mod.addElement("player2 " + " Assist " +  player2.getAssist());
-            }else if(flag3 == true){
-                player3.addAssist();
-                mod.addElement("player3 " + " Assist " +  player3.getAssist());
-            }else if(flag4 == true){
-                player4.addAssist();
-                mod.addElement("player4 " + " Assist " +  player4.getAssist());
-            }else if(flag5 == true){
-                player5.addAssist();
-                mod.addElement("player5 " + " Assist " +  player5.getAssist());
-            }else if(flagOpp == true){
-                playerOpp.addAssist();
-                mod.addElement("Opponent " + " Assist " +  playerOpp.getAssist());
-            }
-        }
-    }//GEN-LAST:event_assistButtonActionPerformed
-
-    private void turnoverButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnoverButtonActionPerformed
-        displayList.setModel(mod);
-        // Turnover Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subTurnover();
-                mod.addElement("sub player1 " + " Turnover " +  player1.getTurnover());
-            }else if(flag2 == true){
-                player2.subTurnover();
-                mod.addElement("sub player2 " + " Turnover " +  player2.getTurnover());
-            }else if(flag3 == true){
-                player3.subTurnover();
-                mod.addElement("sub player3 " + " Turnover " +  player3.getTurnover());
-            }else if(flag4 == true){
-                player4.subTurnover();
-                mod.addElement("sub player4 " + " Turnover " +  player4.getTurnover());
-            }else if(flag5 == true){
-                player5.subTurnover();
-                mod.addElement("sub player5 " + " Turnover " +  player5.getTurnover());
-            }else if(flagOpp == true){
-                playerOpp.subTurnover();
-                mod.addElement("sub Opponent " + " Turnover " +  playerOpp.getTurnover());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addTurnover();
-                mod.addElement("player1 " + " Turnover " +  player1.getTurnover());
-            }else if(flag2 == true){
-                player2.addTurnover();
-                mod.addElement("player2 " + " Turnover " +  player2.getTurnover());
-            }else if(flag3 == true){
-                player3.addTurnover();
-                mod.addElement("player3 " + " Turnover " +  player3.getTurnover());
-            }else if(flag4 == true){
-                player4.addTurnover();
-                mod.addElement("player4 " + " Turnover " +  player4.getTurnover());
-            }else if(flag5 == true){
-                player5.addTurnover();
-                mod.addElement("player5 " + " Turnover " +  player5.getTurnover());
-            }else if(flagOpp == true){
-                playerOpp.addTurnover();
-                mod.addElement("Opponent " + " Turnover " +  playerOpp.getTurnover());
-            }
-        }
-    }//GEN-LAST:event_turnoverButtonActionPerformed
-
-    private void stealButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stealButtonActionPerformed
-        displayList.setModel(mod);
-        // Steal Actions and Logs
-        if (RBSubtract.isSelected()){
-            if (flag1 == true){
-                player1.subSteal();
-                mod.addElement("sub player1 " + " Steal " +  player1.getSteal());
-            }else if(flag2 == true){
-                player2.subSteal();
-                mod.addElement("sub player2 " + " Steal " +  player2.getSteal());
-            }else if(flag3 == true){
-                player3.subSteal();
-                mod.addElement("sub player3 " + " Steal " +  player3.getSteal());
-            }else if(flag4 == true){
-                player4.subSteal();
-                mod.addElement("sub player4 " + " Steal " +  player4.getSteal());
-            }else if(flag5 == true){
-                player5.subSteal();
-                mod.addElement("sub player5 " + " Steal " +  player5.getSteal());
-            }else if(flagOpp == true){
-                playerOpp.subSteal();
-                mod.addElement("sub Opponent " + " Steal " +  playerOpp.getSteal());
-            }
-        }else{
-            if (flag1 == true){
-                player1.addSteal();
-                mod.addElement("player1 " + " Steal " +  player1.getSteal());
-            }else if(flag2 == true){
-                player2.addSteal();
-                mod.addElement("player2 " + " Steal " +  player2.getSteal());
-            }else if(flag3 == true){
-                player3.addSteal();
-                mod.addElement("player3 " + " Steal " +  player3.getSteal());
-            }else if(flag4 == true){
-                player4.addSteal();
-                mod.addElement("player4 " + " Steal " +  player4.getSteal());
-            }else if(flag5 == true){
-                player5.addSteal();
-                mod.addElement("player5 " + " Steal " +  player5.getSteal());
-            }else if(flagOpp == true){
-                playerOpp.addSteal();
-                mod.addElement("Opponent " + " Steal " +  playerOpp.getSteal());
-            }
-        }
-    }//GEN-LAST:event_stealButtonActionPerformed
+        refreshScoreboard();
+    }//GEN-LAST:event_foulButtonActionPerformed
 
     private void blockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blockButtonActionPerformed
         displayList.setModel(mod);
@@ -1332,98 +932,566 @@ public class BballUI extends javax.swing.JFrame {
                 mod.addElement("Opponent " + " Block " +  playerOpp.getBlock());
             }
         }
+        refreshScoreboard();
     }//GEN-LAST:event_blockButtonActionPerformed
 
-    
-    private void menuNameEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit1ActionPerformed
-        // Edit name of Player 1
-        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player1.getName() + " :");
-        player1.setName(newName);
-        player1But.setText(player1.getName());
-        menuNameEdit1.setText(newName);
-    }//GEN-LAST:event_menuNameEdit1ActionPerformed
-
-    private void menuNameEdit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit2ActionPerformed
-        // Edit name of Player 2
-        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player2.getName() + " :");
-        player2.setName(newName);
-        player2But.setText(player2.getName());
-        menuNameEdit2.setText(newName);
-    }//GEN-LAST:event_menuNameEdit2ActionPerformed
-
-    private void menuNameEdit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit3ActionPerformed
-        // Edit name of Player 3
-        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player3.getName() + " :");
-        player3.setName(newName);
-        player3But.setText(player3.getName());
-        menuNameEdit3.setText(newName);
-    }//GEN-LAST:event_menuNameEdit3ActionPerformed
-
-    private void menuNameEdit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit4ActionPerformed
-        // Edit name of Player 4
-        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player4.getName() + " :");
-        player4.setName(newName);
-        player4But.setText(player3.getName());
-        menuNameEdit4.setText(newName);
-    }//GEN-LAST:event_menuNameEdit4ActionPerformed
-
-    private void menuNameEdit5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit5ActionPerformed
-        // Edit name of Player 5
-        String newName = JOptionPane.showInputDialog(this, "Type in new name or number for " + player5.getName() + " :");
-        player5.setName(newName);
-        player5But.setText(player5.getName());
-        menuNameEdit5.setText(newName);
-    }//GEN-LAST:event_menuNameEdit5ActionPerformed
-
-    private void foulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foulButtonActionPerformed
+    private void stealButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stealButtonActionPerformed
         displayList.setModel(mod);
-        // Foul Actions and Logs
+        // Steal Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
-                player1.subFoul();
-                mod.addElement("sub player1 " + " Foul " +  player1.getFoul());
+                player1.subSteal();
+                mod.addElement("sub player1 " + " Steal " +  player1.getSteal());
             }else if(flag2 == true){
-                player2.subFoul();
-                mod.addElement("sub player2 " + " Foul " +  player2.getFoul());
+                player2.subSteal();
+                mod.addElement("sub player2 " + " Steal " +  player2.getSteal());
             }else if(flag3 == true){
-                player3.subFoul();
-                mod.addElement("sub player3 " + " Foul " +  player3.getFoul());
+                player3.subSteal();
+                mod.addElement("sub player3 " + " Steal " +  player3.getSteal());
             }else if(flag4 == true){
-                player4.subFoul();
-                mod.addElement("sub player4 " + " Foul " +  player4.getFoul());
+                player4.subSteal();
+                mod.addElement("sub player4 " + " Steal " +  player4.getSteal());
             }else if(flag5 == true){
-                player5.subFoul();
-                mod.addElement("sub player5 " + " Foul " +  player5.getFoul());
+                player5.subSteal();
+                mod.addElement("sub player5 " + " Steal " +  player5.getSteal());
             }else if(flagOpp == true){
-                playerOpp.subFoul();
-                mod.addElement("sub Opponent " + " Foul " +  playerOpp.getFoul());
+                playerOpp.subSteal();
+                mod.addElement("sub Opponent " + " Steal " +  playerOpp.getSteal());
             }
         }else{
             if (flag1 == true){
-                player1.addFoul();
-                mod.addElement("player1 " + " Foul " +  player1.getFoul());
+                player1.addSteal();
+                mod.addElement("player1 " + " Steal " +  player1.getSteal());
             }else if(flag2 == true){
-                player2.addFoul();
-                mod.addElement("player2 " + " Foul " +  player2.getFoul());
+                player2.addSteal();
+                mod.addElement("player2 " + " Steal " +  player2.getSteal());
             }else if(flag3 == true){
-                player3.addFoul();
-                mod.addElement("player3 " + " Foul " +  player3.getFoul());
+                player3.addSteal();
+                mod.addElement("player3 " + " Steal " +  player3.getSteal());
             }else if(flag4 == true){
-                player4.addFoul();
-                mod.addElement("player4 " + " Foul " +  player4.getFoul());
+                player4.addSteal();
+                mod.addElement("player4 " + " Steal " +  player4.getSteal());
             }else if(flag5 == true){
-                player5.addFoul();
-                mod.addElement("player5 " + " Foul " +  player5.getFoul());
+                player5.addSteal();
+                mod.addElement("player5 " + " Steal " +  player5.getSteal());
             }else if(flagOpp == true){
-                playerOpp.addFoul();
-                mod.addElement("Opponent " + " Foul " +  playerOpp.getFoul());
+                playerOpp.addSteal();
+                mod.addElement("Opponent " + " Steal " +  playerOpp.getSteal());
             }
         }
-    }//GEN-LAST:event_foulButtonActionPerformed
+        refreshScoreboard();
+    }//GEN-LAST:event_stealButtonActionPerformed
 
-    private void tableRefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableRefreshButtonActionPerformed
-        refreshTable();
-    }//GEN-LAST:event_tableRefreshButtonActionPerformed
+    private void defReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_defReboundButtonActionPerformed
+        displayList.setModel(mod);
+        // Defensive Rebound Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subdefRebound();
+                mod.addElement("sub player1 " + " Def Rebound " +  player1.getdefRebound());
+            }else if(flag2 == true){
+                player2.subdefRebound();
+                mod.addElement("sub player2 " + " Def Rebound " +  player2.getdefRebound());
+            }else if(flag3 == true){
+                player3.subdefRebound();
+                mod.addElement("sub player3 " + " Def Rebound " +  player3.getdefRebound());
+            }else if(flag4 == true){
+                player4.subdefRebound();
+                mod.addElement("sub player4 " + " Def Rebound " +  player4.getdefRebound());
+            }else if(flag5 == true){
+                player5.subdefRebound();
+                mod.addElement("sub player5 " + " Def Rebound " +  player5.getdefRebound());
+            }else if(flagOpp == true){
+                playerOpp.subdefRebound();
+                mod.addElement("sub Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+            }
+        }else{
+            if (flag1 == true){
+                player1.adddefRebound();
+                mod.addElement("player1 " + " Def Rebound " +  player1.getdefRebound());
+            }else if(flag2 == true){
+                player2.adddefRebound();
+                mod.addElement("player2 " + " Def Rebound " +  player2.getdefRebound());
+            }else if(flag3 == true){
+                player3.adddefRebound();
+                mod.addElement("player3 " + " Def Rebound " +  player3.getdefRebound());
+            }else if(flag4 == true){
+                player4.adddefRebound();
+                mod.addElement("player4 " + " Def Rebound " +  player4.getdefRebound());
+            }else if(flag5 == true){
+                player5.adddefRebound();
+                mod.addElement("player5 " + " Def Rebound " +  player5.getdefRebound());
+            }else if(flagOpp == true){
+                playerOpp.adddefRebound();
+                mod.addElement("Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_defReboundButtonActionPerformed
+
+    private void turnoverButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnoverButtonActionPerformed
+        displayList.setModel(mod);
+        // Turnover Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subTurnover();
+                mod.addElement("sub player1 " + " Turnover " +  player1.getTurnover());
+            }else if(flag2 == true){
+                player2.subTurnover();
+                mod.addElement("sub player2 " + " Turnover " +  player2.getTurnover());
+            }else if(flag3 == true){
+                player3.subTurnover();
+                mod.addElement("sub player3 " + " Turnover " +  player3.getTurnover());
+            }else if(flag4 == true){
+                player4.subTurnover();
+                mod.addElement("sub player4 " + " Turnover " +  player4.getTurnover());
+            }else if(flag5 == true){
+                player5.subTurnover();
+                mod.addElement("sub player5 " + " Turnover " +  player5.getTurnover());
+            }else if(flagOpp == true){
+                playerOpp.subTurnover();
+                mod.addElement("sub Opponent " + " Turnover " +  playerOpp.getTurnover());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addTurnover();
+                mod.addElement("player1 " + " Turnover " +  player1.getTurnover());
+            }else if(flag2 == true){
+                player2.addTurnover();
+                mod.addElement("player2 " + " Turnover " +  player2.getTurnover());
+            }else if(flag3 == true){
+                player3.addTurnover();
+                mod.addElement("player3 " + " Turnover " +  player3.getTurnover());
+            }else if(flag4 == true){
+                player4.addTurnover();
+                mod.addElement("player4 " + " Turnover " +  player4.getTurnover());
+            }else if(flag5 == true){
+                player5.addTurnover();
+                mod.addElement("player5 " + " Turnover " +  player5.getTurnover());
+            }else if(flagOpp == true){
+                playerOpp.addTurnover();
+                mod.addElement("Opponent " + " Turnover " +  playerOpp.getTurnover());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_turnoverButtonActionPerformed
+
+    private void assistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assistButtonActionPerformed
+        displayList.setModel(mod);
+        // Assists Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subAssist();
+                mod.addElement("sub player1 " + " Assist " +  player1.getAssist());
+            }else if(flag2 == true){
+                player2.subAssist();
+                mod.addElement("sub player2 " + " Assist " +  player2.getAssist());
+            }else if(flag3 == true){
+                player3.subAssist();
+                mod.addElement("sub player3 " + " Assist " +  player3.getAssist());
+            }else if(flag4 == true){
+                player4.subAssist();
+                mod.addElement("sub player4 " + " Assist " +  player4.getAssist());
+            }else if(flag5 == true){
+                player5.subAssist();
+                mod.addElement("sub player5 " + " Assist " +  player5.getAssist());
+            }else if(flagOpp == true){
+                playerOpp.subAssist();
+                mod.addElement("sub Opponent " + " Assist " +  playerOpp.getAssist());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addAssist();
+                mod.addElement("player1 " + " Assist " +  player1.getAssist());
+            }else if(flag2 == true){
+                player2.addAssist();
+                mod.addElement("player2 " + " Assist " +  player2.getAssist());
+            }else if(flag3 == true){
+                player3.addAssist();
+                mod.addElement("player3 " + " Assist " +  player3.getAssist());
+            }else if(flag4 == true){
+                player4.addAssist();
+                mod.addElement("player4 " + " Assist " +  player4.getAssist());
+            }else if(flag5 == true){
+                player5.addAssist();
+                mod.addElement("player5 " + " Assist " +  player5.getAssist());
+            }else if(flagOpp == true){
+                playerOpp.addAssist();
+                mod.addElement("Opponent " + " Assist " +  playerOpp.getAssist());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_assistButtonActionPerformed
+
+    private void offReboundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offReboundButtonActionPerformed
+        displayList.setModel(mod);
+        // Offensive Rebound Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.suboffRebound();
+                mod.addElement("sub player1 " + "Off Reb " +  player1.getoffRebound());
+            }else if(flag2 == true){
+                player2.suboffRebound();
+                mod.addElement("sub player2 " + "Off Reb " +  player2.getoffRebound());
+            }else if(flag3 == true){
+                player3.suboffRebound();
+                mod.addElement("sub player3 " + "Off Reb " +  player3.getoffRebound());
+            }else if(flag4 == true){
+                player4.suboffRebound();
+                mod.addElement("sub player4 " + "Off Reb " +  player4.getoffRebound());
+            }else if(flag5 == true){
+                player5.suboffRebound();
+                mod.addElement("sub player5 " + "Off Reb " +  player5.getoffRebound());
+            }else if(flagOpp == true){
+                playerOpp.suboffRebound();
+                mod.addElement("sub Opponent " + "Off Reb " +  playerOpp.getoffRebound());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addoffRebound();
+                mod.addElement("player1 " + "Off Reb " +  player1.getoffRebound());
+            }else if(flag2 == true){
+                player2.addoffRebound();
+                mod.addElement("player2 " + "Off Reb " +  player2.getoffRebound());
+            }else if(flag3 == true){
+                player3.addoffRebound();
+                mod.addElement("player3 " + "Off Reb " +  player3.getoffRebound());
+            }else if(flag4 == true){
+                player4.addoffRebound();
+                mod.addElement("player4 " + "Off Reb " +  player4.getoffRebound());
+            }else if(flag5 == true){
+                player5.addoffRebound();
+                mod.addElement("player5 " + "Off Reb " +  player5.getoffRebound());
+            }else if(flagOpp == true){
+                playerOpp.addoffRebound();
+                mod.addElement("Opponent " + "Off Reb " +  playerOpp.getoffRebound());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_offReboundButtonActionPerformed
+
+    private void threeMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMissButtonActionPerformed
+        displayList.setModel(mod);
+        // 3pt Miss Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subthreeMiss();
+                mod.addElement("sub player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subthreeMiss();
+                mod.addElement("sub player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subthreeMiss();
+                mod.addElement("sub player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subthreeMiss();
+                mod.addElement("sub player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subthreeMiss();
+                mod.addElement("sub player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subthreeMiss();
+                mod.addElement("sub Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addthreeMiss();
+                mod.addElement("player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addthreeMiss();
+                mod.addElement("player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addthreeMiss();
+                mod.addElement("player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addthreeMiss();
+                mod.addElement("player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addthreeMiss();
+                mod.addElement("player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addthreeMiss();
+                mod.addElement("Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_threeMissButtonActionPerformed
+
+    private void twoMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoMissButtonActionPerformed
+        displayList.setModel(mod);
+        // TODO add your handling code here:
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subtwoMiss();
+                mod.addElement("sub player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subtwoMiss();
+                mod.addElement("sub player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subtwoMiss();
+                mod.addElement("sub player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subtwoMiss();
+                mod.addElement("sub player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subtwoMiss();
+                mod.addElement("sub player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subtwoMiss();
+                mod.addElement("sub Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addtwoMiss();
+                mod.addElement("player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addtwoMiss();
+                mod.addElement("player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addtwoMiss();
+                mod.addElement("player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addtwoMiss();
+                mod.addElement("player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addtwoMiss();
+                mod.addElement("player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addtwoMiss();
+                mod.addElement("Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_twoMissButtonActionPerformed
+
+    private void ftMissButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMissButtonActionPerformed
+        displayList.setModel(mod);
+        // FreeThrow Miss Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subftMiss();
+                mod.addElement("sub player1 " + "FT Miss, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subftMiss();
+                mod.addElement("sub player2 " + "FT Miss, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subftMiss();
+                mod.addElement("sub player3 " + "FT Miss, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subftMiss();
+                mod.addElement("sub player4 " + "FT Miss, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subftMiss();
+                mod.addElement("sub player5 " + "FT Miss, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subftMiss();
+                mod.addElement("sub Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addftMiss();
+                mod.addElement("player1 " + "FT Miss, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addftMiss();
+                mod.addElement("player2 " + "FT Miss, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addftMiss();
+                mod.addElement("player3 " + "FT Miss, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addftMiss();
+                mod.addElement("player4 " + "FT Miss, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addftMiss();
+                mod.addElement("player5 " + "FT Miss, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addftMiss();
+                mod.addElement("Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_ftMissButtonActionPerformed
+
+    private void threeMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeMakeButtonActionPerformed
+        displayList.setModel(mod);
+        // 3pt Make Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subthreeMake();
+                mod.addElement("sub player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subthreeMake();
+                mod.addElement("sub player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subthreeMake();
+                mod.addElement("sub player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subthreeMake();
+                mod.addElement("sub player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subthreeMake();
+                mod.addElement("sub player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subthreeMake();
+                mod.addElement("sub Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addthreeMake();
+                mod.addElement("player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addthreeMake();
+                mod.addElement("player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addthreeMake();
+                mod.addElement("player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addthreeMake();
+                mod.addElement("player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addthreeMake();
+                mod.addElement("player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addthreeMake();
+                mod.addElement("Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_threeMakeButtonActionPerformed
+
+    private void twoMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoMakeButtonActionPerformed
+        displayList.setModel(mod);
+        // 2pt Make Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subtwoMake();
+                mod.addElement("sub player1 " + "2pt Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subtwoMake();
+                mod.addElement("sub player2 " + "2pt Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subtwoMake();
+                mod.addElement("sub player3 " + "2pt Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subtwoMake();
+                mod.addElement("sub player4 " + "2pt Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subtwoMake();
+                mod.addElement("sub player5 " + "2pt Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subtwoMake();
+                mod.addElement("sub Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addtwoMake();
+                mod.addElement("player1 " + "2pt Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addtwoMake();
+                mod.addElement("player2 " + "2pt Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addtwoMake();
+                mod.addElement("player3 " + "2pt Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addtwoMake();
+                mod.addElement("player4 " + "2pt Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addtwoMake();
+                mod.addElement("player5 " + "2pt Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addtwoMake();
+                mod.addElement("Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_twoMakeButtonActionPerformed
+
+    private void ftMakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftMakeButtonActionPerformed
+        displayList.setModel(mod);
+        // FreeThrow Make Actions and Logs
+        if (RBSubtract.isSelected()){
+            if (flag1 == true){
+                player1.subftMake();
+                mod.addElement("sub player1 " + "FT Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.subftMake();
+                mod.addElement("sub player2 " + "FT Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.subftMake();
+                mod.addElement("sub player3 " + "FT Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.subftMake();
+                mod.addElement("sub player4 " + "FT Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.subftMake();
+                mod.addElement("sub player5 " + "FT Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.subftMake();
+                mod.addElement("sub Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }else{
+            if (flag1 == true){
+                player1.addftMake();
+                mod.addElement("player1 " + "FT Make, Points: " + player1.gettotalPoints());
+            }else if(flag2 == true){
+                player2.addftMake();
+                mod.addElement("player2 " + "FT Make, Points: " + player2.gettotalPoints());
+            }else if(flag3 == true){
+                player3.addftMake();
+                mod.addElement("player3 " + "FT Make, Points: " + player3.gettotalPoints());
+            }else if(flag4 == true){
+                player4.addftMake();
+                mod.addElement("player4 " + "FT Make, Points: " + player4.gettotalPoints());
+            }else if(flag5 == true){
+                player5.addftMake();
+                mod.addElement("player5 " + "FT Make, Points: " + player5.gettotalPoints());
+            }else if(flagOpp == true){
+                playerOpp.addftMake();
+                mod.addElement("Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
+            }
+        }
+        refreshScoreboard();
+    }//GEN-LAST:event_ftMakeButtonActionPerformed
+
+    private void RBSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBSubtractActionPerformed
+        // PlaceHolder
+    }//GEN-LAST:event_RBSubtractActionPerformed
+
+   //Register Button Press for playerOpp
+    private void oppButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oppButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flagOpp = true;
+    }//GEN-LAST:event_oppButActionPerformed
+
+    private void player5ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player5ButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flag5 = true;
+    }//GEN-LAST:event_player5ButActionPerformed
+
+    private void player4ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player4ButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flag4 = true;
+    }//GEN-LAST:event_player4ButActionPerformed
+
+    private void player3ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player3ButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flag3 = true;
+    }//GEN-LAST:event_player3ButActionPerformed
+
+    private void player2ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player2ButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flag2 = true;
+    }//GEN-LAST:event_player2ButActionPerformed
+
+    private void player1ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player1ButActionPerformed
+        // TODO add your handling code here:
+        resetFlags();
+        flag1 = true;
+    }//GEN-LAST:event_player1ButActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1539,7 +1607,7 @@ public class BballUI extends javax.swing.JFrame {
     }
     public int calculateteamFoul(){
         teamFoul = (player1.getFoul() + player2.getFoul() + player3.getFoul() + player4.getFoul() + player5.getFoul());
-        return teamBlock;
+        return teamFoul;
     }
     
     public void refreshTable(){
@@ -1623,6 +1691,12 @@ public class BballUI extends javax.swing.JFrame {
         statTable2.setShowGrid(true);
         statTable2.setGridColor(Color.LIGHT_GRAY);
     }
+    public void refreshScoreboard(){
+        teamScoreBoard.setText(String.valueOf(calculateteamScore()));
+        oppScoreBoard.setText(String.valueOf(playerOpp.gettotalPoints()));
+        teamFoulBoard.setText(String.valueOf(calculateteamFoul()));
+        oppFoulBoard.setText(String.valueOf(playerOpp.getFoul()));
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1667,12 +1741,12 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JButton foulButton;
     private javax.swing.JButton ftMakeButton;
     private javax.swing.JButton ftMissButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -1701,6 +1775,8 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuNameEdit5;
     private javax.swing.JButton offReboundButton;
     private javax.swing.JButton oppBut;
+    private javax.swing.JLabel oppFoulBoard;
+    private javax.swing.JLabel oppScoreBoard;
     private javax.swing.JButton player1But;
     private javax.swing.JButton player2But;
     private javax.swing.JButton player3But;
@@ -1710,6 +1786,8 @@ public class BballUI extends javax.swing.JFrame {
     private javax.swing.JTable statTable2;
     private javax.swing.JButton stealButton;
     private javax.swing.JButton tableRefreshButton;
+    private javax.swing.JLabel teamFoulBoard;
+    private javax.swing.JLabel teamScoreBoard;
     private javax.swing.JButton threeMakeButton;
     private javax.swing.JButton threeMissButton;
     private javax.swing.JButton turnoverButton;
