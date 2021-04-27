@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -36,9 +39,8 @@ public class Player {
     //following constructors
     //A constructor that accepts the following values as arguments and assigns 
     //them to the appropriate fields: employee's name, employee's ID number, department, and position
-    public Player(String name){
+    public Player(String name){     
         this.name = name;
-
     }
     
     //A no-arg constructor that assigns empty strings ("") to the name, department,
@@ -77,8 +79,13 @@ public class Player {
         this.totalPoints += 1;
     }
     public void subftMake(){
-        this.ftMake -= 1;
-        this.totalPoints -= 1;
+        try{
+            NumberCheck.checkAge(this.getftMake());
+            this.ftMake -= 1;
+            this.totalPoints -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getftMake(){
         return ftMake;
@@ -87,7 +94,12 @@ public class Player {
         this.ftMiss += 1;
     }
     public void subftMiss(){
-        this.ftMiss -= 1;
+        try{
+            NumberCheck.checkAge(this.getftMiss());
+            this.ftMiss -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getftMiss(){
         return ftMiss;
@@ -111,8 +123,13 @@ public class Player {
         this.totalPoints += 2; 
     }
     public void subtwoMake(){
-        this.twoMake -= 1;
-        this.totalPoints -= 2; 
+        try{
+            NumberCheck.checkAge(this.gettwoMake());
+            this.twoMake -= 1;
+            this.totalPoints -= 2;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int gettwoMake(){
         return twoMake;
@@ -121,8 +138,12 @@ public class Player {
         this.twoMiss += 1;
     }
     public void subtwoMiss(){
-        this.twoMiss -= 1;
-        this.twoMiss -= 1;
+        try{
+            NumberCheck.checkAge(this.gettwoMiss());
+            this.twoMiss -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int gettwoMiss(){
         return twoMiss;
@@ -146,8 +167,13 @@ public class Player {
         this.totalPoints += 3;
     }
     public void subthreeMake(){
-        this.threeMake -= 1;
-        this.totalPoints -= 3;
+        try{
+            NumberCheck.checkAge(this.getthreeMake());
+            this.threeMake -= 1;
+            this.totalPoints -= 3;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getthreeMake(){
         return threeMake;
@@ -156,7 +182,12 @@ public class Player {
         this.threeMiss += 1;
     }
     public void subthreeMiss(){
-        this.threeMiss -= 1;
+        try{
+            NumberCheck.checkAge(this.getthreeMiss());
+            this.threeMiss -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getthreeMiss(){
         return threeMiss;
@@ -180,7 +211,12 @@ public class Player {
         this.offRebound += 1;
     }
     public void suboffRebound(){
-        this.offRebound -= 1;
+        try{
+            NumberCheck.checkAge(this.getoffRebound());
+            this.offRebound -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getoffRebound(){
         return offRebound;
@@ -189,7 +225,12 @@ public class Player {
         this.defRebound += 1;
     }
     public void subdefRebound(){
-        this.defRebound -= 1;
+        try{
+            NumberCheck.checkAge(this.getdefRebound());
+            this.defRebound -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getdefRebound(){
         return defRebound;
@@ -202,7 +243,12 @@ public class Player {
         this.assists += 1;
     }
     public void subAssist(){
-        this.assists -= 1;
+        try{
+            NumberCheck.checkAge(this.getAssist());
+            this.assists -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getAssist(){
         return assists;
@@ -211,7 +257,12 @@ public class Player {
         this.turnovers += 1;
     }
     public void subTurnover(){
-        this.turnovers -= 1;
+        try{
+            NumberCheck.checkAge(this.getTurnover());
+            this.turnovers -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getTurnover(){
         return turnovers;
@@ -220,7 +271,12 @@ public class Player {
         this.steals += 1;
     }
     public void subSteal(){
-        this.steals -= 1;
+        try{
+            NumberCheck.checkAge(this.getSteal());
+            this.steals -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getSteal(){
         return steals;
@@ -229,7 +285,12 @@ public class Player {
         this.blocks += 1;
     }
     public void subBlock(){
-        this.blocks -= 1;
+        try{
+            NumberCheck.checkAge(this.getBlock());
+            this.blocks -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getBlock(){
         return blocks;
@@ -238,7 +299,12 @@ public class Player {
         this.fouls += 1;
     }
     public void subFoul(){
-        this.fouls -= 1;
+        try{
+            NumberCheck.checkAge(this.getFoul());
+            this.fouls -= 1;
+        }catch(BelowZeroException ex){
+            JOptionPane.showMessageDialog(null,"You attempted to make a stat go below zero.");
+        }
     }
     public int getFoul(){
         return fouls;
