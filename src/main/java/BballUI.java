@@ -781,7 +781,7 @@ public class BballUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     DefaultListModel mod = new DefaultListModel();
     
-    
+    //Menu items to edit names of players
     private void menuNameEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNameEdit1ActionPerformed
         // Edit name of Player 1
         String newName = "";
@@ -837,52 +837,54 @@ public class BballUI extends javax.swing.JFrame {
         menuNameEdit5.setText(newName);
     }//GEN-LAST:event_menuNameEdit5ActionPerformed
 
+    //Refresh the data in the table
     private void tableRefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableRefreshButtonActionPerformed
         refreshTable();
     }//GEN-LAST:event_tableRefreshButtonActionPerformed
 
+    //Action Buttons 
     private void foulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foulButtonActionPerformed
         displayList.setModel(mod);
         // Foul Actions and Logs
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subFoul();
-                mod.addElement("sub player1"  + " Foul " +  player1.getFoul());
+                mod.addElement("SUB " + player1.getName()  + " Foul " +  player1.getFoul());
             }else if(flag2 == true){
                 player2.subFoul();
-                mod.addElement("sub player2 " + " Foul " +  player2.getFoul());
+                mod.addElement("SUB " + player2.getName() + " Foul " +  player2.getFoul());
             }else if(flag3 == true){
                 player3.subFoul();
-                mod.addElement("sub player3 " + " Foul " +  player3.getFoul());
+                mod.addElement("SUB " + player3.getName() + " Foul " +  player3.getFoul());
             }else if(flag4 == true){
                 player4.subFoul();
-                mod.addElement("sub player4 " + " Foul " +  player4.getFoul());
+                mod.addElement("SUB " + player4.getName() + " Foul " +  player4.getFoul());
             }else if(flag5 == true){
                 player5.subFoul();
-                mod.addElement("sub player5 " + " Foul " +  player5.getFoul());
+                mod.addElement("SUB " + player5.getName() + " Foul " +  player5.getFoul());
             }else if(flagOpp == true){
                 playerOpp.subFoul();
-                mod.addElement("sub Opponent " + " Foul " +  playerOpp.getFoul());
+                mod.addElement("SUB " + "Opponent " + " Foul " +  playerOpp.getFoul());
             }
         }else{
             if (flag1 == true){
                 player1.addFoul();
-                mod.addElement("player1 " + " Foul " +  player1.getFoul());
+                mod.addElement(player1.getName() + " Foul " +  player1.getFoul());
             }else if(flag2 == true){
                 player2.addFoul();
-                mod.addElement("player2 " + " Foul " +  player2.getFoul());
+                mod.addElement(player2.getName() + " Foul " +  player2.getFoul());
             }else if(flag3 == true){
                 player3.addFoul();
-                mod.addElement("player3 " + " Foul " +  player3.getFoul());
+                mod.addElement(player3.getName() + " Foul " +  player3.getFoul());
             }else if(flag4 == true){
                 player4.addFoul();
-                mod.addElement("player4 " + " Foul " +  player4.getFoul());
+                mod.addElement(player4.getName() + " Foul " +  player4.getFoul());
             }else if(flag5 == true){
                 player5.addFoul();
-                mod.addElement("player5 " + " Foul " +  player5.getFoul());
+                mod.addElement(player5.getName() + " Foul " +  player5.getFoul());
             }else if(flagOpp == true){
                 playerOpp.addFoul();
-                mod.addElement("Opponent " + " Foul " +  playerOpp.getFoul());
+                mod.addElement("Opponent" + " Foul " +  playerOpp.getFoul());
             }
         }
         refreshScoreboard();
@@ -894,42 +896,42 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subBlock();
-                mod.addElement("sub player1 " + " Block " +  player1.getBlock());
+                mod.addElement("SUB " + player1.getName() + " Block " +  player1.getBlock());
             }else if(flag2 == true){
                 player2.subBlock();
-                mod.addElement("sub player2 " + " Block " +  player2.getBlock());
+                mod.addElement("SUB " + player2.getName() + " Block " +  player2.getBlock());
             }else if(flag3 == true){
                 player3.subBlock();
-                mod.addElement("sub player3 " + " Block " +  player3.getBlock());
+                mod.addElement("SUB " + player3.getName() + " Block " +  player3.getBlock());
             }else if(flag4 == true){
                 player4.subBlock();
-                mod.addElement("sub player4 " + " Block " +  player4.getBlock());
+                mod.addElement("SUB " + player4.getName() + " Block " +  player4.getBlock());
             }else if(flag5 == true){
                 player5.subBlock();
-                mod.addElement("sub player5 " + " Block " +  player5.getBlock());
+                mod.addElement("SUB " + player5.getName() + " Block " +  player5.getBlock());
             }else if(flagOpp == true){
                 playerOpp.subBlock();
-                mod.addElement("sub Opponent " + " Block " +  playerOpp.getBlock());
+                mod.addElement("SUB " + "Opponent " + " Block " +  playerOpp.getBlock());
             }
         }else{
             if (flag1 == true){
                 player1.addBlock();
-                mod.addElement("player1 " + " Block " +  player1.getBlock());
+                mod.addElement(player1.getName() + " Block " +  player1.getBlock());
             }else if(flag2 == true){
                 player2.addBlock();
-                mod.addElement("player2 " + " Block " +  player2.getBlock());
+                mod.addElement(player2.getName() + " Block " +  player2.getBlock());
             }else if(flag3 == true){
                 player3.addBlock();
-                mod.addElement("player3 " + " Block " +  player3.getBlock());
+                mod.addElement(player3.getName() + " Block " +  player3.getBlock());
             }else if(flag4 == true){
                 player4.addBlock();
-                mod.addElement("player4 " + " Block " +  player4.getBlock());
+                mod.addElement(player4.getName() + " Block " +  player4.getBlock());
             }else if(flag5 == true){
                 player5.addBlock();
-                mod.addElement("player5 " + " Block " +  player5.getBlock());
+                mod.addElement(player5.getName() + " Block " +  player5.getBlock());
             }else if(flagOpp == true){
                 playerOpp.addBlock();
-                mod.addElement("Opponent " + " Block " +  playerOpp.getBlock());
+                mod.addElement("Opponent" + " Block " +  playerOpp.getBlock());
             }
         }
         refreshScoreboard();
@@ -941,39 +943,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subSteal();
-                mod.addElement("sub player1 " + " Steal " +  player1.getSteal());
+                mod.addElement("SUB " + player1.getName() + " Steal " +  player1.getSteal());
             }else if(flag2 == true){
                 player2.subSteal();
-                mod.addElement("sub player2 " + " Steal " +  player2.getSteal());
+                mod.addElement("SUB " + player2.getName() + " Steal " +  player2.getSteal());
             }else if(flag3 == true){
                 player3.subSteal();
-                mod.addElement("sub player3 " + " Steal " +  player3.getSteal());
+                mod.addElement("SUB " + player3.getName() + " Steal " +  player3.getSteal());
             }else if(flag4 == true){
                 player4.subSteal();
-                mod.addElement("sub player4 " + " Steal " +  player4.getSteal());
+                mod.addElement("SUB " + player4.getName() + " Steal " +  player4.getSteal());
             }else if(flag5 == true){
                 player5.subSteal();
-                mod.addElement("sub player5 " + " Steal " +  player5.getSteal());
+                mod.addElement("SUB " + player5.getName() + " Steal " +  player5.getSteal());
             }else if(flagOpp == true){
                 playerOpp.subSteal();
-                mod.addElement("sub Opponent " + " Steal " +  playerOpp.getSteal());
+                mod.addElement("SUB " + "Opponent" + " Steal " +  playerOpp.getSteal());
             }
         }else{
             if (flag1 == true){
                 player1.addSteal();
-                mod.addElement("player1 " + " Steal " +  player1.getSteal());
+                mod.addElement(player1.getName() + " Steal " +  player1.getSteal());
             }else if(flag2 == true){
                 player2.addSteal();
-                mod.addElement("player2 " + " Steal " +  player2.getSteal());
+                mod.addElement(player2.getName() + " Steal " +  player2.getSteal());
             }else if(flag3 == true){
                 player3.addSteal();
-                mod.addElement("player3 " + " Steal " +  player3.getSteal());
+                mod.addElement(player3.getName() + " Steal " +  player3.getSteal());
             }else if(flag4 == true){
                 player4.addSteal();
-                mod.addElement("player4 " + " Steal " +  player4.getSteal());
+                mod.addElement(player4.getName() + " Steal " +  player4.getSteal());
             }else if(flag5 == true){
                 player5.addSteal();
-                mod.addElement("player5 " + " Steal " +  player5.getSteal());
+                mod.addElement(player5.getName() + " Steal " +  player5.getSteal());
             }else if(flagOpp == true){
                 playerOpp.addSteal();
                 mod.addElement("Opponent " + " Steal " +  playerOpp.getSteal());
@@ -988,42 +990,42 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subdefRebound();
-                mod.addElement("sub player1 " + " Def Rebound " +  player1.getdefRebound());
+                mod.addElement("SUB " + player1.getName() + " Def Rebound " +  player1.getdefRebound());
             }else if(flag2 == true){
                 player2.subdefRebound();
-                mod.addElement("sub player2 " + " Def Rebound " +  player2.getdefRebound());
+                mod.addElement("SUB " + player2.getName() + " Def Rebound " +  player2.getdefRebound());
             }else if(flag3 == true){
                 player3.subdefRebound();
-                mod.addElement("sub player3 " + " Def Rebound " +  player3.getdefRebound());
+                mod.addElement("SUB " + player3.getName() + " Def Rebound " +  player3.getdefRebound());
             }else if(flag4 == true){
                 player4.subdefRebound();
-                mod.addElement("sub player4 " + " Def Rebound " +  player4.getdefRebound());
+                mod.addElement("SUB " + player4.getName() + " Def Rebound " +  player4.getdefRebound());
             }else if(flag5 == true){
                 player5.subdefRebound();
-                mod.addElement("sub player5 " + " Def Rebound " +  player5.getdefRebound());
+                mod.addElement("SUB " + player5.getName() + " Def Rebound " +  player5.getdefRebound());
             }else if(flagOpp == true){
                 playerOpp.subdefRebound();
-                mod.addElement("sub Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+                mod.addElement("SUB " + "Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
             }
         }else{
             if (flag1 == true){
                 player1.adddefRebound();
-                mod.addElement("player1 " + " Def Rebound " +  player1.getdefRebound());
+                mod.addElement(player1.getName() + " Def Rebound " +  player1.getdefRebound());
             }else if(flag2 == true){
                 player2.adddefRebound();
-                mod.addElement("player2 " + " Def Rebound " +  player2.getdefRebound());
+                mod.addElement(player2.getName() + " Def Rebound " +  player2.getdefRebound());
             }else if(flag3 == true){
                 player3.adddefRebound();
-                mod.addElement("player3 " + " Def Rebound " +  player3.getdefRebound());
+                mod.addElement(player3.getName() + " Def Rebound " +  player3.getdefRebound());
             }else if(flag4 == true){
                 player4.adddefRebound();
-                mod.addElement("player4 " + " Def Rebound " +  player4.getdefRebound());
+                mod.addElement(player4.getName() + " Def Rebound " +  player4.getdefRebound());
             }else if(flag5 == true){
                 player5.adddefRebound();
-                mod.addElement("player5 " + " Def Rebound " +  player5.getdefRebound());
+                mod.addElement(player5.getName() + " Def Rebound " +  player5.getdefRebound());
             }else if(flagOpp == true){
                 playerOpp.adddefRebound();
-                mod.addElement("Opponent " + " Def Rebound " +  playerOpp.getdefRebound());
+                mod.addElement("Opponent" + " Def Rebound " +  playerOpp.getdefRebound());
             }
         }
         refreshScoreboard();
@@ -1035,39 +1037,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subTurnover();
-                mod.addElement("sub player1 " + " Turnover " +  player1.getTurnover());
+                mod.addElement("SUB " + player1.getName() + " Turnover " +  player1.getTurnover());
             }else if(flag2 == true){
                 player2.subTurnover();
-                mod.addElement("sub player2 " + " Turnover " +  player2.getTurnover());
+                mod.addElement("SUB " + player2.getName() + " Turnover " +  player2.getTurnover());
             }else if(flag3 == true){
                 player3.subTurnover();
-                mod.addElement("sub player3 " + " Turnover " +  player3.getTurnover());
+                mod.addElement("SUB " + player3.getName() + " Turnover " +  player3.getTurnover());
             }else if(flag4 == true){
                 player4.subTurnover();
-                mod.addElement("sub player4 " + " Turnover " +  player4.getTurnover());
+                mod.addElement("SUB " + player4.getName() + " Turnover " +  player4.getTurnover());
             }else if(flag5 == true){
                 player5.subTurnover();
-                mod.addElement("sub player5 " + " Turnover " +  player5.getTurnover());
+                mod.addElement("SUB " + player5.getName() + " Turnover " +  player5.getTurnover());
             }else if(flagOpp == true){
                 playerOpp.subTurnover();
-                mod.addElement("sub Opponent " + " Turnover " +  playerOpp.getTurnover());
+                mod.addElement("SUB Opponent " + " Turnover " +  playerOpp.getTurnover());
             }
         }else{
             if (flag1 == true){
                 player1.addTurnover();
-                mod.addElement("player1 " + " Turnover " +  player1.getTurnover());
+                mod.addElement(player1.getName() + " Turnover " +  player1.getTurnover());
             }else if(flag2 == true){
                 player2.addTurnover();
-                mod.addElement("player2 " + " Turnover " +  player2.getTurnover());
+                mod.addElement(player2.getName() + " Turnover " +  player2.getTurnover());
             }else if(flag3 == true){
                 player3.addTurnover();
-                mod.addElement("player3 " + " Turnover " +  player3.getTurnover());
+                mod.addElement(player3.getName() + " Turnover " +  player3.getTurnover());
             }else if(flag4 == true){
                 player4.addTurnover();
-                mod.addElement("player4 " + " Turnover " +  player4.getTurnover());
+                mod.addElement(player4.getName() + " Turnover " +  player4.getTurnover());
             }else if(flag5 == true){
                 player5.addTurnover();
-                mod.addElement("player5 " + " Turnover " +  player5.getTurnover());
+                mod.addElement(player5.getName() + " Turnover " +  player5.getTurnover());
             }else if(flagOpp == true){
                 playerOpp.addTurnover();
                 mod.addElement("Opponent " + " Turnover " +  playerOpp.getTurnover());
@@ -1082,39 +1084,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subAssist();
-                mod.addElement("sub player1 " + " Assist " +  player1.getAssist());
+                mod.addElement("SUB " + player1.getName() + " Assist " +  player1.getAssist());
             }else if(flag2 == true){
                 player2.subAssist();
-                mod.addElement("sub player2 " + " Assist " +  player2.getAssist());
+                mod.addElement("SUB " + player2.getName() + " Assist " +  player2.getAssist());
             }else if(flag3 == true){
                 player3.subAssist();
-                mod.addElement("sub player3 " + " Assist " +  player3.getAssist());
+                mod.addElement("SUB " + player3.getName() + " Assist " +  player3.getAssist());
             }else if(flag4 == true){
                 player4.subAssist();
-                mod.addElement("sub player4 " + " Assist " +  player4.getAssist());
+                mod.addElement("SUB " + player4.getName() + " Assist " +  player4.getAssist());
             }else if(flag5 == true){
                 player5.subAssist();
-                mod.addElement("sub player5 " + " Assist " +  player5.getAssist());
+                mod.addElement("SUB " + player5.getName() + " Assist " +  player5.getAssist());
             }else if(flagOpp == true){
                 playerOpp.subAssist();
-                mod.addElement("sub Opponent " + " Assist " +  playerOpp.getAssist());
+                mod.addElement("SUB Opponent " + " Assist " +  playerOpp.getAssist());
             }
         }else{
             if (flag1 == true){
                 player1.addAssist();
-                mod.addElement("player1 " + " Assist " +  player1.getAssist());
+                mod.addElement(player1.getName() + " Assist " +  player1.getAssist());
             }else if(flag2 == true){
                 player2.addAssist();
-                mod.addElement("player2 " + " Assist " +  player2.getAssist());
+                mod.addElement(player2.getName() + " Assist " +  player2.getAssist());
             }else if(flag3 == true){
                 player3.addAssist();
-                mod.addElement("player3 " + " Assist " +  player3.getAssist());
+                mod.addElement(player3.getName() + " Assist " +  player3.getAssist());
             }else if(flag4 == true){
                 player4.addAssist();
-                mod.addElement("player4 " + " Assist " +  player4.getAssist());
+                mod.addElement(player4.getName() + " Assist " +  player4.getAssist());
             }else if(flag5 == true){
                 player5.addAssist();
-                mod.addElement("player5 " + " Assist " +  player5.getAssist());
+                mod.addElement(player5.getName() + " Assist " +  player5.getAssist());
             }else if(flagOpp == true){
                 playerOpp.addAssist();
                 mod.addElement("Opponent " + " Assist " +  playerOpp.getAssist());
@@ -1129,39 +1131,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.suboffRebound();
-                mod.addElement("sub player1 " + "Off Reb " +  player1.getoffRebound());
+                mod.addElement("SUB " + player1.getName() + " Off Reb " +  player1.getoffRebound());
             }else if(flag2 == true){
                 player2.suboffRebound();
-                mod.addElement("sub player2 " + "Off Reb " +  player2.getoffRebound());
+                mod.addElement("SUB " + player2.getName() + " Off Reb " +  player2.getoffRebound());
             }else if(flag3 == true){
                 player3.suboffRebound();
-                mod.addElement("sub player3 " + "Off Reb " +  player3.getoffRebound());
+                mod.addElement("SUB " + player3.getName() + " Off Reb " +  player3.getoffRebound());
             }else if(flag4 == true){
                 player4.suboffRebound();
-                mod.addElement("sub player4 " + "Off Reb " +  player4.getoffRebound());
+                mod.addElement("SUB " + player4.getName() + " Off Reb " +  player4.getoffRebound());
             }else if(flag5 == true){
                 player5.suboffRebound();
-                mod.addElement("sub player5 " + "Off Reb " +  player5.getoffRebound());
+                mod.addElement("SUB " + player5.getName() + "Off Reb " +  player5.getoffRebound());
             }else if(flagOpp == true){
                 playerOpp.suboffRebound();
-                mod.addElement("sub Opponent " + "Off Reb " +  playerOpp.getoffRebound());
+                mod.addElement("SUB Opponent " + "Off Reb " +  playerOpp.getoffRebound());
             }
         }else{
             if (flag1 == true){
                 player1.addoffRebound();
-                mod.addElement("player1 " + "Off Reb " +  player1.getoffRebound());
+                mod.addElement(player1.getName() + " Off Reb " +  player1.getoffRebound());
             }else if(flag2 == true){
                 player2.addoffRebound();
-                mod.addElement("player2 " + "Off Reb " +  player2.getoffRebound());
+                mod.addElement(player2.getName() + " Off Reb " +  player2.getoffRebound());
             }else if(flag3 == true){
                 player3.addoffRebound();
-                mod.addElement("player3 " + "Off Reb " +  player3.getoffRebound());
+                mod.addElement(player3.getName() + " Off Reb " +  player3.getoffRebound());
             }else if(flag4 == true){
                 player4.addoffRebound();
-                mod.addElement("player4 " + "Off Reb " +  player4.getoffRebound());
+                mod.addElement(player4.getName() + " Off Reb " +  player4.getoffRebound());
             }else if(flag5 == true){
                 player5.addoffRebound();
-                mod.addElement("player5 " + "Off Reb " +  player5.getoffRebound());
+                mod.addElement(player5.getName() + " Off Reb " +  player5.getoffRebound());
             }else if(flagOpp == true){
                 playerOpp.addoffRebound();
                 mod.addElement("Opponent " + "Off Reb " +  playerOpp.getoffRebound());
@@ -1176,39 +1178,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subthreeMiss();
-                mod.addElement("sub player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " 3pt Miss, Points: " +  player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subthreeMiss();
-                mod.addElement("sub player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " 3pt Miss, Points: " +  player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subthreeMiss();
-                mod.addElement("sub player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " 3pt Miss, Points: " +  player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subthreeMiss();
-                mod.addElement("sub player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " 3pt Miss, Points: " +  player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subthreeMiss();
-                mod.addElement("sub player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " 3pt Miss, Points: " +  player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subthreeMiss();
-                mod.addElement("sub Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addthreeMiss();
-                mod.addElement("player1 " + " 3pt Miss, Points: " +  player1.gettotalPoints());
+                mod.addElement(player1.getName() + " 3pt Miss, Points: " +  player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addthreeMiss();
-                mod.addElement("player2 " + " 3pt Miss, Points: " +  player2.gettotalPoints());
+                mod.addElement(player2.getName() + " 3pt Miss, Points: " +  player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addthreeMiss();
-                mod.addElement("player3 " + " 3pt Miss, Points: " +  player3.gettotalPoints());
+                mod.addElement(player3.getName() + " 3pt Miss, Points: " +  player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addthreeMiss();
-                mod.addElement("player4 " + " 3pt Miss, Points: " +  player4.gettotalPoints());
+                mod.addElement(player4.getName() + " 3pt Miss, Points: " +  player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addthreeMiss();
-                mod.addElement("player5 " + " 3pt Miss, Points: " +  player5.gettotalPoints());
+                mod.addElement(player5.getName() + " 3pt Miss, Points: " +  player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addthreeMiss();
                 mod.addElement("Opponent " + " 3pt Miss, Points: " +  playerOpp.gettotalPoints());
@@ -1223,39 +1225,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subtwoMiss();
-                mod.addElement("sub player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " 2pt Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subtwoMiss();
-                mod.addElement("sub player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " 2pt Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subtwoMiss();
-                mod.addElement("sub player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " 2pt Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subtwoMiss();
-                mod.addElement("sub player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " 2pt Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subtwoMiss();
-                mod.addElement("sub player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " 2pt Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subtwoMiss();
-                mod.addElement("sub Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addtwoMiss();
-                mod.addElement("player1 " + "2pt Miss, Points: " + player1.gettotalPoints());
+                mod.addElement(player1.getName() + " 2pt Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addtwoMiss();
-                mod.addElement("player2 " + "2pt Miss, Points: " + player2.gettotalPoints());
+                mod.addElement(player2.getName() + " 2pt Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addtwoMiss();
-                mod.addElement("player3 " + "2pt Miss, Points: " + player3.gettotalPoints());
+                mod.addElement(player3.getName() + " 2pt Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addtwoMiss();
-                mod.addElement("player4 " + "2pt Miss, Points: " + player4.gettotalPoints());
+                mod.addElement(player4.getName() + " 2pt Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addtwoMiss();
-                mod.addElement("player5 " + "2pt Miss, Points: " + player5.gettotalPoints());
+                mod.addElement(player5.getName() + " 2pt Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addtwoMiss();
                 mod.addElement("Opponent " + "2pt Miss, Points: " + playerOpp.gettotalPoints());
@@ -1270,39 +1272,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subftMiss();
-                mod.addElement("sub player1 " + "FT Miss, Points: " + player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " FT Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subftMiss();
-                mod.addElement("sub player2 " + "FT Miss, Points: " + player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " FT Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subftMiss();
-                mod.addElement("sub player3 " + "FT Miss, Points: " + player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " FT Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subftMiss();
-                mod.addElement("sub player4 " + "FT Miss, Points: " + player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " FT Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subftMiss();
-                mod.addElement("sub player5 " + "FT Miss, Points: " + player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " FT Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subftMiss();
-                mod.addElement("sub Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addftMiss();
-                mod.addElement("player1 " + "FT Miss, Points: " + player1.gettotalPoints());
+                mod.addElement(player1.getName() + " FT Miss, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addftMiss();
-                mod.addElement("player2 " + "FT Miss, Points: " + player2.gettotalPoints());
+                mod.addElement(player2.getName() + " FT Miss, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addftMiss();
-                mod.addElement("player3 " + "FT Miss, Points: " + player3.gettotalPoints());
+                mod.addElement(player3.getName() + " FT Miss, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addftMiss();
-                mod.addElement("player4 " + "FT Miss, Points: " + player4.gettotalPoints());
+                mod.addElement(player4.getName() + " FT Miss, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addftMiss();
-                mod.addElement("player5 " + "FT Miss, Points: " + player5.gettotalPoints());
+                mod.addElement(player5.getName() + " FT Miss, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addftMiss();
                 mod.addElement("Opponent " + "FT Miss, Points: " + playerOpp.gettotalPoints());
@@ -1317,39 +1319,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subthreeMake();
-                mod.addElement("sub player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " 3pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subthreeMake();
-                mod.addElement("sub player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " 3pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subthreeMake();
-                mod.addElement("sub player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " 3pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subthreeMake();
-                mod.addElement("sub player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " 3pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subthreeMake();
-                mod.addElement("sub player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " 3pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subthreeMake();
-                mod.addElement("sub Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addthreeMake();
-                mod.addElement("player1 " + " 3pt Make, Points: " + player1.gettotalPoints());
+                mod.addElement(player1.getName() + " 3pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addthreeMake();
-                mod.addElement("player2 " + " 3pt Make, Points: " + player2.gettotalPoints());
+                mod.addElement(player2.getName() + " 3pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addthreeMake();
-                mod.addElement("player3 " + " 3pt Make, Points: " + player3.gettotalPoints());
+                mod.addElement(player3.getName() + " 3pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addthreeMake();
-                mod.addElement("player4 " + " 3pt Make, Points: " + player4.gettotalPoints());
+                mod.addElement(player4.getName() + " 3pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addthreeMake();
-                mod.addElement("player5 " + " 3pt Make, Points: " + player5.gettotalPoints());
+                mod.addElement(player5.getName() + " 3pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addthreeMake();
                 mod.addElement("Opponent " + " 3pt Make, Points: " + playerOpp.gettotalPoints());
@@ -1364,39 +1366,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subtwoMake();
-                mod.addElement("sub player1 " + "2pt Make, Points: " + player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " 2pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subtwoMake();
-                mod.addElement("sub player2 " + "2pt Make, Points: " + player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " 2pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subtwoMake();
-                mod.addElement("sub player3 " + "2pt Make, Points: " + player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " 2pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subtwoMake();
-                mod.addElement("sub player4 " + "2pt Make, Points: " + player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " 2pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subtwoMake();
-                mod.addElement("sub player5 " + "2pt Make, Points: " + player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " 2pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subtwoMake();
-                mod.addElement("sub Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addtwoMake();
-                mod.addElement("player1 " + "2pt Make, Points: " + player1.gettotalPoints());
+                mod.addElement(player1.getName() + " 2pt Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addtwoMake();
-                mod.addElement("player2 " + "2pt Make, Points: " + player2.gettotalPoints());
+                mod.addElement(player2.getName() + " 2pt Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addtwoMake();
-                mod.addElement("player3 " + "2pt Make, Points: " + player3.gettotalPoints());
+                mod.addElement(player3.getName() + " 2pt Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addtwoMake();
-                mod.addElement("player4 " + "2pt Make, Points: " + player4.gettotalPoints());
+                mod.addElement(player4.getName() + " 2pt Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addtwoMake();
-                mod.addElement("player5 " + "2pt Make, Points: " + player5.gettotalPoints());
+                mod.addElement(player5.getName() + " 2pt Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addtwoMake();
                 mod.addElement("Opponent " + "2pt Make, Points: " + playerOpp.gettotalPoints());
@@ -1411,39 +1413,39 @@ public class BballUI extends javax.swing.JFrame {
         if (RBSubtract.isSelected()){
             if (flag1 == true){
                 player1.subftMake();
-                mod.addElement("sub player1 " + "FT Make, Points: " + player1.gettotalPoints());
+                mod.addElement("SUB " + player1.getName() + " FT Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.subftMake();
-                mod.addElement("sub player2 " + "FT Make, Points: " + player2.gettotalPoints());
+                mod.addElement("SUB " + player2.getName() + " FT Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.subftMake();
-                mod.addElement("sub player3 " + "FT Make, Points: " + player3.gettotalPoints());
+                mod.addElement("SUB " + player3.getName() + " FT Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.subftMake();
-                mod.addElement("sub player4 " + "FT Make, Points: " + player4.gettotalPoints());
+                mod.addElement("SUB " + player4.getName() + " FT Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.subftMake();
-                mod.addElement("sub player5 " + "FT Make, Points: " + player5.gettotalPoints());
+                mod.addElement("SUB " + player5.getName() + " FT Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.subftMake();
-                mod.addElement("sub Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
+                mod.addElement("SUB Opponent " + " FT Make, Points: " + playerOpp.gettotalPoints());
             }
         }else{
             if (flag1 == true){
                 player1.addftMake();
-                mod.addElement("player1 " + "FT Make, Points: " + player1.gettotalPoints());
+                mod.addElement(player1.getName() + " FT Make, Points: " + player1.gettotalPoints());
             }else if(flag2 == true){
                 player2.addftMake();
-                mod.addElement("player2 " + "FT Make, Points: " + player2.gettotalPoints());
+                mod.addElement(player2.getName() + " FT Make, Points: " + player2.gettotalPoints());
             }else if(flag3 == true){
                 player3.addftMake();
-                mod.addElement("player3 " + "FT Make, Points: " + player3.gettotalPoints());
+                mod.addElement(player3.getName() + " FT Make, Points: " + player3.gettotalPoints());
             }else if(flag4 == true){
                 player4.addftMake();
-                mod.addElement("player4 " + "FT Make, Points: " + player4.gettotalPoints());
+                mod.addElement(player4.getName() + " FT Make, Points: " + player4.gettotalPoints());
             }else if(flag5 == true){
                 player5.addftMake();
-                mod.addElement("player5 " + "FT Make, Points: " + player5.gettotalPoints());
+                mod.addElement(player5.getName() + " FT Make, Points: " + player5.gettotalPoints());
             }else if(flagOpp == true){
                 playerOpp.addftMake();
                 mod.addElement("Opponent " + "FT Make, Points: " + playerOpp.gettotalPoints());
@@ -1451,7 +1453,8 @@ public class BballUI extends javax.swing.JFrame {
         }
         refreshScoreboard();
     }//GEN-LAST:event_ftMakeButtonActionPerformed
-
+    
+    //Subtraction RadioButton
     private void RBSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBSubtractActionPerformed
         // PlaceHolder
     }//GEN-LAST:event_RBSubtractActionPerformed
@@ -1463,6 +1466,7 @@ public class BballUI extends javax.swing.JFrame {
         flagOpp = true;
     }//GEN-LAST:event_oppButActionPerformed
 
+    //Player Button Listeners
     private void player5ButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player5ButActionPerformed
         // TODO add your handling code here:
         resetFlags();
